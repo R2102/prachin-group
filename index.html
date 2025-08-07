@@ -10,14 +10,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
     <link rel="stylesheet" href="assets/CSS/style.css">
     <link rel="stylesheet" href="assets/CSS/color-variables.css">
+    <link rel="stylesheet" href="assets/CSS/header-styles.css">
+    
+    <!-- Preload Header Template for Faster Loading -->
+    <link rel="preload" href="assets/Templates/header-template.html" as="fetch" crossorigin>
+    
     <!-- Slick Carousel CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<body class="bg-gray-50 text-gray-700 antialiased ">
-  <!-- Load the dynamic header script -->
-  <script src="js/header.js"></script>
+<body>
+    <!-- Header Container -->
+    <div id="header-container"></div>
+
+    <!-- Header Loader Script -->
+    <script src="js/header-loader.js"></script>
 
     <script>
         // Ensure page starts from top and remove any footer-related hash

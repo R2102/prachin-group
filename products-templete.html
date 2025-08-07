@@ -7,16 +7,22 @@
   </title>
   <link rel="icon" type="image/x-icon" href="assets/images/company/Prachin Group.png">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="style.css" rel="stylesheet"/>
-  <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
-    <link rel="stylesheet" href="assets/CSS/style.css">
-    <link rel="stylesheet" href="assets/CSS/color-variables.css">
-    <!-- Slick Carousel CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="assets/CSS/style.css">
+  <link rel="stylesheet" href="assets/CSS/color-variables.css">
+  
+  <!-- Header Styles -->
+  <link rel="stylesheet" href="assets/CSS/header-styles.css">
+  
+  <!-- Preload Header Template for Faster Loading -->
+  <link rel="preload" href="assets/Templates/header-template.html" as="fetch" crossorigin>
+  
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
   <style>
    body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -26,8 +32,11 @@
   </style>
  </head>
 <body class="bg-gray-50 text-gray-700 antialiased">
-  <!-- Load the dynamic header script -->
-  <script src="js/header.js"></script>
+  <!-- Header Container -->
+  <div id="header-container"></div>
+
+  <!-- Header Loader Script -->
+  <script src="js/header-loader.js"></script>
   
   <header class="bg-[#144a75] text-white py-10 px-4 sm:px-8">
     <div class="max-w-4xl mx-auto text-center">
