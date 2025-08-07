@@ -1,0 +1,1971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parchin Group - Driving Innovation and Excellence</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/company/Prachin Group.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="assets/CSS/color-variables.css">
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-700 antialiased ">
+  <!-- Load the dynamic header script -->
+  <script src="js/header.js"></script>
+
+    <script>
+        // Ensure page starts from top and remove any footer-related hash
+        window.scrollTo(0, 0);
+        if (window.location.hash && window.location.hash.includes('footer')) {
+            history.replaceState(null, null, window.location.pathname);
+        }
+        
+        // Also ensure it stays at top after DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            window.scrollTo(0, 0);
+            if (window.location.hash && window.location.hash.includes('footer')) {
+                history.replaceState(null, null, window.location.pathname);
+            }
+        });
+    </script>
+
+    <section id="home" class="relative w-full h-96 md:h-[500px] lg:h-[600px] overflow-hidden">
+        <!-- Slider container -->
+        <div class="slider-container relative w-full h-full">
+            <!-- Slide 1: Innovation -->
+            <div class="slide active absolute inset-0 w-full h-full flex items-center justify-center">
+                <div class="slide-bg" style="background-image: url('assets/images/sliders/Banner-01.jpg');"></div>
+                <div class=" bg-gradient-to-r from-blue-900/80 to-blue-600/60"></div>
+                <div class="relative z-20 text-center text-white px-6 max-w-4xl mx-auto slide-content">
+                    <div class="mb-6 slide-badge">
+                        <span class="inline-block px-4 py-2 backdrop-blur-sm text-white text-xs font-bold rounded-full border shadow-lg" style="background: var(--gradient-blue); border-color: rgba(32, 87, 129, 0.5);">
+                            35+ Years of Pharmaceutical Excellence 
+                        </span>
+                    </div>
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 leading-tight slide-title">
+                      The Reliability Behind <span style="color: #ffffff;">Your
+                        FormulationSuccess</span>
+                    </h1>
+                    <!-- <p class="text-lg md:text-xl text-blue-100 mb-6 leading-relaxed slide-description">
+                        Pioneering excellence across global sectors with cutting-edge solutions and unwavering commitment to quality.
+                    </p> -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center slide-buttons">
+                        <a href="#about" class="inline-flex items-center px-6 py-3 text-white font-bold rounded-lg shadow-primary shadow-primary-hover transition-all duration-300 backdrop-blur-sm text-sm bg-gradient-primary">
+                          Explore Products <i class="fas fa-globe ml-2"></i>
+                        </a>
+                        <a href="#contact" class="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm text-white font-bold rounded-lg border-2 border-white/50 hover:bg-white/30 transition-all duration-300 text-sm">
+                          Connect Now <i class="fas fa-play ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2: Sustainability -->
+            <div class="slide absolute inset-0 w-full h-full flex items-center justify-center">
+                <div class="slide-bg" style="background-image: url('assets/images/sliders/Banner-02.jpg');"></div>
+                <div class="relative z-20 text-center text-white px-6 max-w-4xl mx-auto slide-content">
+                    <div class="mb-6 slide-badge">
+                        <span class="inline-block px-4 py-2 backdrop-blur-sm text-white text-xs font-bold rounded-full border shadow-lg bg-gradient-primary" style="border-color: rgba(32, 87, 129, 0.5);">
+                          35+ Years of Pharmaceutical Excellence
+                        </span>
+                    </div>
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 leading-tight slide-title">
+                      Formulating Trust <span style="color: #ffffff;"> Since 1989</span> 
+                    </h1>
+                    <!-- <p class="text-lg md:text-xl text-green-100 mb-6 leading-relaxed slide-description">
+                        Committed to a brighter, greener future through eco-friendly practices and responsible business solutions.
+                    </p> -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center slide-buttons">
+                        <a href="#services" class="inline-flex items-center px-6 py-3 text-white font-bold rounded-lg shadow-primary shadow-primary-hover transition-all duration-300 backdrop-blur-sm text-sm bg-gradient-primary">
+                          Explore Products <i class="fas fa-leaf ml-2"></i>
+                        </a>
+                        <a href="#companies" class="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm text-white font-bold rounded-lg border-2 border-white/50 hover:bg-white/30 transition-all duration-300 text-sm">
+                          Connect Now <i class="fas fa-tree ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3: Global Reach -->
+            <div class="slide absolute inset-0 w-full h-full flex items-center justify-center">
+                <div class="slide-bg" style="background-image: url('assets/images/sliders/Banner-03.webp');"></div>
+                <div class=" bg-gradient-to-r from-purple-900/80 to-purple-600/60"></div>
+                <div class="relative z-20 text-center text-white px-6 max-w-4xl mx-auto slide-content">
+                    <div class="mb-6 slide-badge">
+                        <span class="inline-block px-4 py-2 backdrop-blur-sm text-white text-xs font-bold rounded-full border shadow-lg bg-gradient-primary" style="border-color: rgba(32, 87, 129, 0.5);">
+                          35+ Years of Pharmaceutical Excellence
+                        </span>
+                    </div>
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 leading-tight slide-title">
+                      Shaping Wellness <span style="color: #ffffff;">Together</span>  
+                    </h1>
+                    <!-- <p class="text-lg md:text-xl text-purple-100 mb-6 leading-relaxed slide-description">
+                        Connecting markets worldwide, building lasting relationships, and delivering value across international borders.
+                    </p> -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center slide-buttons">
+                        <a href="#about" class="inline-flex items-center px-6 py-3 text-white font-bold rounded-lg shadow-primary shadow-primary-hover transition-all duration-300 backdrop-blur-sm text-sm bg-gradient-primary">
+                          Explore Products <i class="fas fa-globe ml-2"></i>
+                        </a>
+                        <a href="contact-us.html" class="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm text-white font-bold rounded-lg border-2 border-white/50 hover:bg-white/30 transition-all duration-300 text-sm">
+                            Connect Now <i class="fas fa-handshake ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <button type="button" class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full shadow-lg hover:bg-white/30 transition-all duration-300 z-30 focus:outline-none" id="prevBtn">
+            <i class="fas fa-chevron-left text-lg"></i>
+        </button>
+        <button type="button" class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full shadow-lg hover:bg-white/30 transition-all duration-300 z-30 focus:outline-none" id="nextBtn">
+            <i class="fas fa-chevron-right text-lg"></i>
+        </button>
+
+        <!-- Dots container -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-30" id="dotsContainer"></div>
+    </section>
+
+    <section id="about" class="py-10 md:py-14 bg-white">
+        <div class="container mx-auto px-6 max-w-[1600px]">
+            <div class="text-center mb-8 md:mb-10">
+                <h2 class="section-title fade-in-up">About Prachin Group</h2>
+                <p class="section-subtitle fade-in-up" style="animation-delay: 0.2s;">
+                    Established in the USA, Prachin Chemical Inc. has built a reputation for excellence in the distribution of pharmaceutical and chemical excipients. With decades of experience, we are dedicated to providing high-quality, pharmacopeia-grade materials that serve the pharmaceutical, nutraceutical, and food industries. Our operations are supported by globally recognized certifications, including USFDA, GMP, ISO 9001, ISO 14001, ISO 22000, Excipact, HALAL, and KOSHER, ensuring full compliance with international standards such as IP, BP, USP, Ph.Eur., and JP.
+                </p>
+            </div>
+            <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 text-center stagger-fade-in-up tabcard">
+                <div class="p-6 card" style="animation-delay: 0.4s;">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-lightbulb fa-3x"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Our Mission</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        To deliver exceptional value and innovative solutions to our clients and stakeholders, contributing positively to the communities we serve globally.
+                    </p>
+                </div>
+                <div class="p-8 card" style="animation-delay: 0.6s;">
+                    <div class="text-blue-600 mb-5">
+                        <i class="fas fa-eye fa-3x"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Our Vision</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        To be a leading global conglomerate, recognized for our unwavering commitment to quality, sustainability, and transformative growth.
+                    </p>
+                </div>
+                <div class="p-8 card" style="animation-delay: 0.8s;">
+                    <div class="text-blue-600 mb-5">
+                        <i class="fas fa-shield-alt fa-3x"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Core Values</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Integrity, Excellence, Innovation, Collaboration, and Sustainability are the fundamental pillars of our operations and enduring success.
+                    </p>
+                </div>
+            </div>
+        </div> -->
+    </section>
+    <section id="about-us-page" class="py-14 md:py-16 bg-white">
+      <div class="container mx-auto px-4 md:px-6 max-w-full lg:max-w-[90%] xl:max-w-[1400px]">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <!-- Left: Section Title + About -->
+          <div>
+            <div class="mb-12">
+              <div class="text-sm font-bold text-gray-400 mb-2">Why Work with Us?</div>
+              <h2 class="text-3xl md:text-4xl font-extrabold text-[#205781] leading-tight mb-8">Your Global Partner in Excipients and <br class="hidden md:block"> Chemicals</h2>
+            </div>
+            <div class="flex items-start gap-3 mb-4">
+              <span class="inline-block w-2 h-8 bg-gradient-to-b from-[#205781] to-[#3a6ea5] rounded"></span>
+              <h3 class="text-2xl md:text-3xl font-bold text-[#205781] tracking-tight">About Prachin Chemical Inc.</h3>
+            </div>
+            <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-6">
+              Prachin Chemical Inc. is the U.S.-based distribution arm of Prachin Pharmachem, a globally recognized manufacturer of pharmaceutical excipients, nutraceutical ingredients, functional mineral salts and APIs. Operating from the United States, we serve as a reliable sourcing partner for formulators and manufacturers across North America.
+            </p>
+            <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-6">
+              Backed by over 30 years of manufacturing expertise, Prachin Chemical Inc. ensures timely and compliant delivery of pharmacopeia-grade ingredients, including cellulose derivatives, citrates, stearates, and co-processed excipients. Our materials conform to global standards such as IP, BP, USP, Ph.Eur., and JP, and are supported by certifications including GMP, ISO, HALAL, KOSHER, Excipact, and USDMF filings.
+            </p>
+            <p class="text-gray-600 text-base md:text-lg leading-relaxed">
+              We are committed to supplying consistent, regulatory-compliant ingredients with responsive local support—empowering formulation success across the pharmaceutical, nutraceutical, and food sectors.
+            </p>
+          </div>
+          <!-- Right: Centered Image + Vision Card -->
+          <div class="flex flex-col items-center justify-center h-full">
+            <div class="flex flex-col items-center w-full gap-6">
+              <div class="w-3/4 h-80 bg-white rounded-2xl shadow-lg overflow-hidden">
+                <img src="https://prachinpharmachem.com/assets/images/team/19.jpg" alt="Prachin Chemical Inc. - Your Global Partner" class="w-full h-full object-cover" />
+              </div>
+              <div class="w-3/4 relative bg-[#f5fafd] rounded-2xl p-5 sm:p-6 md:p-7 shadow-md border-l-4 border-[#205781] flex flex-col sm:flex-row items-start gap-3 sm:gap-4 min-h-[20rem] max-h-fit">
+                <span class="text-[#205781] text-2xl sm:text-3xl mb-2 sm:mb-0 sm:mt-1 flex-shrink-0"><i class="fas fa-quote-left"></i></span>
+                <div class="flex-1 overflow-hidden">
+                  <h4 class="text-xl md:text-2xl font-bold text-[#205781] mb-3">Our Vision for the Future</h4>
+                  <p class="text-gray-700 text-base md:text-lg leading-relaxed italic">
+                    "To lead the global distribution of premium excipients and chemicals, setting the standard for quality, innovation, and customer satisfaction. We strive to build lasting partnerships, provide sustainable solutions, and contribute to the success and growth of industries, communities, and people around the world."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- What's New Section (Redesigned) -->
+<section id="whats-new" class="py-20 bg-gradient-to-br from-[#e3eaf6] via-[#c7e0f7] to-[#b3d8f7] relative overflow-hidden">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-[#205781] text-center mb-4 drop-shadow-lg tracking-tight">What's New at Prachin Chemical Inc.</h2>
+    <p class="text-lg text-[#3a6ea5] font-medium text-center mb-12 max-w-2xl mx-auto">Discover our latest innovations designed to elevate your formulations and manufacturing processes.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
+      <!-- Product 1: Magnesium Supplements -->
+      <div class="group bg-white rounded-3xl shadow-2xl border border-[#e3eaf6] p-8 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-3xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 m-4 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-bold px-4 py-1 rounded-bl-xl rounded-tr-2xl shadow new">New</div>
+        
+        <h3 class="text-2xl font-bold text-[#205781] mb-2 tracking-tight">Magnesium Supplements</h3>
+        <p class="text-gray-700 mb-4">Explore our bioavailable magnesium range for premium nutraceutical formulations.</p>
+        <div class="flex flex-wrap justify-center gap-2 mb-4">
+          <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Magnesium Glycinate</span>
+          <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Magnesium Bisglycinate</span>
+          <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">DiMagnesium Malate</span>
+        </div>
+        <ul class="flex flex-col gap-1 text-sm text-gray-600 mb-6">
+          <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> High absorption</li>
+          <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Gentle on the stomach</li>
+          <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Ideal for bone, nerve & energy support</li>
+        </ul>
+        <a href="#" class="inline-block mt-auto px-6 py-2 bg-gradient-to-r from-[#205781] to-[#3a6ea5] text-white font-bold rounded-lg shadow-lg hover:from-[#3a6ea5] hover:to-[#205781] transition-all duration-300">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+      </div>
+      <!-- Product 2: Direct Compressible Grades -->
+      <div class="group bg-white rounded-3xl shadow-2xl border border-[#e3eaf6] p-8 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-3xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 m-4 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-bold px-4 py-1 rounded-bl-xl rounded-tr-2xl shadow new">New</div>
+        
+        <h3 class="text-2xl font-bold text-[#205781] mb-2 tracking-tight">Direct Compressible (DC) Grades</h3>
+        <p class="text-gray-700 mb-4">Designed for superior flow, compressibility, and tablet uniformity.</p>
+        <div class="flex flex-wrap justify-center gap-2 mb-4">
+          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">DCP (Anhydrous & Dihydrate)</span>
+          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">Magnesium Glycinate (DC)</span>
+          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">Magnesium Oxide (DC)</span>
+          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">Calcium Citrate (DC)</span>
+          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">Calcium Carbonate (DC)</span>
+        </div>
+        <ul class="flex flex-col gap-1 text-sm text-gray-600 mb-6">
+          <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Ideal for high-speed compression</li>
+          <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Saves granulation time</li>
+          <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Consistent tablet performance</li>
+        </ul>
+        <a href="#" class="inline-block mt-auto px-6 py-2 bg-gradient-to-r from-[#3a6ea5] to-[#205781] text-white font-bold rounded-lg shadow-lg hover:from-[#205781] hover:to-[#3a6ea5] transition-all duration-300">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</style>
+<!-- Unique Modern Cards for Industries We Serve (Enhanced & Responsive) -->
+<section id="industries" class="py-24 bg-gradient-to-br from-[#e3eaf6] via-[#c7e0f7] to-[#b3d8f7] relative overflow-hidden">
+  <div class="container mx-auto px-6 relative z-10">
+    <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#205781] text-center mb-4 md:mb-6 drop-shadow-lg tracking-tight animate-fade-in px-4">Industries We Serve</h2>
+      <p class="text-lg sm:text-xl text-[#3a6ea5] font-medium text-center mb-10 md:mb-20 max-w-2xl mx-auto animate-fade-in px-4" style="animation-delay:0.1s">Empowering diverse sectors with innovation, quality, and global reach.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 items-stretch tabcard px-4 sm:px-0">
+      <!-- Pharmaceutical Card -->
+      <div class="unique-card pharma-card group relative overflow-hidden" tabindex="0" aria-label="Pharmaceutical industry card">
+        <!-- <span class="unique-card-badge pharma-badge">💊 Top Rated</span> -->
+        <div class="unique-card-bg pharma-bg"></div>
+        <div class="unique-card-icon pharma-icon">
+          <img src="assets/images/icons/service/1.png" alt="Pharmaceutical Icon" style="width: 80%; height: 100%; object-fit: contain;">
+        </div>
+        <h3 class="unique-card-title text-[#205781]">Pharmaceutical</h3>
+        <p class="unique-card-desc">We offer high-quality Excipients & APIs that exceed the most stringent safety and performance requirements…</p>
+        <!-- <div class="unique-card-fact pharma-fact">USFDA Certified • 30+ Countries</div> -->
+      </div>
+      <!-- Nutraceutical Card -->
+      <div class="unique-card nutra-card group relative overflow-hidden" tabindex="0" aria-label="Nutraceutical industry card">
+        <!-- <span class="unique-card-badge nutra-badge">🌱 New</span> -->
+        <div class="unique-card-bg nutra-bg"></div>
+        <div class="unique-card-icon pharma-icon">
+          <img src="assets/images/icons/service/2.png" alt="Pharmaceutical Icon" style="width: 80%; height: 100%; object-fit: contain;">
+        </div>
+        <h3 class="unique-card-title text-[#43a047]">Nutraceutical</h3>
+        <p class="unique-card-desc">Our excipients are thoughtfully formulated to harmonize with the natural elements of nutraceuticals and dietary supplements…</p>
+        <!-- <div class="unique-card-fact nutra-fact">100+ Wellness Brands</div> -->
+      </div>
+      <!-- Food Card -->
+      <div class="unique-card food-card group relative overflow-hidden" tabindex="0" aria-label="Food industry card">
+        <!-- <span class="unique-card-badge food-badge">🍽️ Popular</span> -->
+        <div class="unique-card-bg food-bg"></div>
+        <div class="unique-card-icon pharma-icon">
+          <img src="assets/images/icons/service/3.png" alt="Pharmaceutical Icon" style="width: 80%; height: 100%; object-fit: contain;">
+        </div>
+        <h3 class="unique-card-title text-[#d32f2f]">Food</h3>
+        <p class="unique-card-desc">Our food-grade solutions support better processing, longer shelf-life, and superior mouthfeel across a wide range of food…</p>
+        <!-- <div class="unique-card-fact food-fact">500+ Food Products</div> -->
+      </div>
+    </div>
+  </div>
+  <style>
+    .unique-card {
+      position: relative;
+      background: rgba(255,255,255,0.7);
+      border-radius: 0.5rem;
+      box-shadow: 0 8px 32px rgba(34,91,125,0.10);
+      backdrop-filter: blur(10px);
+      padding: 1.5rem 1rem 1.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 350px;
+      overflow: hidden;
+      z-index: 1;
+      
+      @media (min-width: 768px) {
+        padding: 2.5rem 2rem 2rem 2rem;
+        min-height: 420px;
+      }
+      transition: box-shadow 0.3s, transform 0.3s, border 0.4s;
+      border: 3px solid transparent;
+      opacity: 0;
+      transform: translateY(40px) scale(0.97);
+    }
+    .unique-card.in-view {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      transition: opacity 0.7s cubic-bezier(0.25,0.8,0.25,1), transform 0.7s cubic-bezier(0.25,0.8,0.25,1);
+    }
+    .unique-card:focus {
+      outline: 2.5px solid #205781;
+      outline-offset: 2px;
+    }
+    .unique-card:hover, .unique-card:focus {
+      box-shadow: 0 16px 48px rgba(34,91,125,0.18), 0 0 32px #20578133;
+      transform: translateY(-8px) scale(1.03);
+      z-index: 2;
+      /* border-image: linear-gradient(90deg, #205781, #d32f2f, #225b7d, #205781) 1; */
+      /* border-width: 3px; */
+      /* border-style: solid; */
+    }
+    .unique-card:hover .unique-card-fact, .unique-card:focus .unique-card-fact {
+      animation: factBounce 0.7s;
+    }
+    @keyframes factBounce {
+      0% { transform: scale(1); }
+      30% { transform: scale(1.15); }
+      60% { transform: scale(0.95); }
+      100% { transform: scale(1); }
+    }
+    .unique-card-badge {
+      position: absolute;
+      top: 1.2rem;
+      left: 1.2rem;
+      z-index: 10;
+      background: linear-gradient(90deg, #fffbe7 0%, #e3eaf6 100%);
+      color: #205781;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.4rem 1.1rem;
+      border-radius: 999px;
+      box-shadow: 0 2px 8px #20578111;
+      letter-spacing: 0.01em;
+      opacity: 0.93;
+      border: 2px solid #e3eaf6;
+      pointer-events: none;
+      user-select: none;
+    }
+    .pharma-badge { color: #205781; border-color: #20578133; }
+    .nutra-badge {  color: #205781; border-color: #20578133; }
+    .food-badge {  color: #205781; border-color: #20578133; }
+    .unique-card-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.7;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .pharma-bg {
+      background: radial-gradient(circle at 60% 40%, #20578155 0%, #e3eaf6 80%);
+      animation: pharmaPulse 3s infinite alternate;
+    }
+    @keyframes pharmaPulse {
+      0% { opacity: 0.7; }
+      100% { opacity: 1; }
+    }
+    .nutra-bg {
+      background: radial-gradient(circle at 60% 40%, #20578155 0%, #e3eaf6 80%);
+      animation: pharmaPulse 3s infinite alternate;
+    }
+    .food-bg {
+      background: radial-gradient(circle at 60% 40%, #20578155 0%, #e3eaf6 80%);
+      animation: pharmaPulse 3s infinite alternate;
+    }
+    @keyframes nutraWave {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    @keyframes foodSparkle {
+      0% { background-position: 0 0, 0 0, 0 0; }
+      100% { background-position: 40px 40px, 30px 30px, 100% 100%; }
+    }
+    .unique-card-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      margin-top: 0.5rem;
+      box-shadow: 0 4px 16px rgba(34,91,125,0.10);
+      position: relative;
+      z-index: 2;
+      background: rgba(255,255,255,0.8);
+      transition: box-shadow 0.3s, transform 0.3s;
+      
+      @media (min-width: 768px) {
+        width: 90px;
+        height: 90px;
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+    .pharma-icon { color: #205781; border: 3px solid #20578133; animation: pharmaIconPulse 2s infinite alternate; }
+    @keyframes pharmaIconPulse { 0% { box-shadow: 0 0 0 #20578133; } 100% { box-shadow: 0 0 24px #20578177; } }
+    .nutra-icon { color: #205781; border: 3px solid #20578133; animation: pharmaIconPulse 2s infinite alternate; }
+    @keyframes nutraIconFloat { 0% { transform: translateY(0); } 100% { transform: translateY(-10px); } }
+    .food-icon { color: #205781; border: 3px solid #20578133; animation: pharmaIconPulse 2s infinite alternate; }
+    @keyframes foodIconSparkle { 0% { filter: brightness(1); } 100% { filter: brightness(1.2) drop-shadow(0 0 8px #ffb30088); } }
+    .unique-card-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.5px;
+      z-index: 2;
+      text-align: center;
+      color: #205781;
+      
+      @media (min-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+    .unique-card-desc {
+      color: #52617A;
+      font-size: 0.95rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      min-height: auto;
+      max-width: 95%;
+      z-index: 2;
+      
+      @media (min-width: 768px) {
+        font-size: 1.08rem;
+        margin-bottom: 1.2rem;
+        min-height: 44px;
+        max-width: 90%;
+      }
+    }
+    .unique-card-fact {
+      font-weight: 700;
+      font-size: 1.08rem;
+      margin-bottom: 1.5rem;
+      margin-top: 0.5rem;
+      text-align: center;
+      z-index: 2;
+      letter-spacing: 0.01em;
+      opacity: 0.85;
+      transition: transform 0.3s;
+    }
+    .pharma-fact { color: #205781; }
+    .nutra-fact { color: #205781; }
+    .food-fact { color: #205781; }
+    .unique-card-btn {
+      display: inline-block;
+      font-weight: 700;
+      color: #205781;
+      position: relative;
+      padding-bottom: 2px;
+      transition: color 0.2s;
+      z-index: 2;
+      font-size: 1.08rem;
+      text-decoration: none;
+      background: none;
+      border: none;
+      outline: none;
+    }
+    .unique-card-btn .unique-card-underline {
+      display: block;
+      height: 3px;
+      width: 0;
+      background: linear-gradient(90deg, #205781, #205781, #205781);
+      border-radius: 2px;
+      transition: width 0.3s;
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+    }
+    .unique-card-btn:hover .unique-card-underline, .unique-card-btn:focus .unique-card-underline {
+      width: 100%;
+    }
+    .pharma-btn { color: #205781; }
+    .nutra-btn { color: #205781; }
+    .food-btn { color: #205781; }
+    @media (max-width: 1023px) {
+      .grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    }
+    @media (max-width: 767px) {
+      .grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3 { grid-template-columns: 1fr !important; }
+      .unique-card { margin: 0 auto 1.2rem auto; min-width: 90vw; max-width: 95vw; padding: 1.2rem 0.5rem 1.2rem 0.5rem; border-radius: 1.2rem; min-height: unset; box-sizing: border-box; margin-left: -21px; }
+      .unique-card-title { font-size: 1.1rem; margin-bottom: 0.3rem; }
+      .unique-card-icon { width: 48px; height: 48px; font-size: 1.2rem; margin-bottom: 0.7rem; margin-top: 0.2rem; }
+      .unique-card-badge { font-size: 0.85rem; padding: 0.25rem 0.7rem; top: 0.6rem; left: 0.6rem; }
+      .unique-card-desc { font-size: 0.98rem; margin-bottom: 0.7rem; min-height: unset; }
+      .unique-card-fact { font-size: 0.98rem; margin-bottom: 0.7rem; margin-top: 0.2rem; }
+      .unique-card-btn { font-size: 0.98rem; padding-bottom: 1px; }
+    }
+  </style>
+  <script>
+    // Scroll-triggered fade/slide-in for unique cards
+    document.addEventListener('DOMContentLoaded', function () {
+      const cards = document.querySelectorAll('.unique-card');
+      if (!('IntersectionObserver' in window) || cards.length === 0) {
+        cards.forEach(card => card.classList.add('in-view'));
+        return;
+      }
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry, idx) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('in-view');
+            }, idx * 120);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      cards.forEach(card => observer.observe(card));
+    });
+  </script>
+</section>
+
+
+    <section id="products-showcase" class="relative py-24 bg-gradient-to-br from-[#e3eaf6] via-[#c7e0f7] to-[#b3d8f7] overflow-hidden">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-14">
+          <h2 class="text-4xl md:text-5xl font-extrabold text-[#205781] mb-4 drop-shadow-lg">Our Featured Products</h2>
+          <p class="text-lg md:text-xl text-[#3a6ea5] font-medium max-w-9xl mx-auto mb-8">Prachin Chemical Inc. is a trusted distributor of high-quality pharmaceutical and chemical excipients based in the USA. With the experience of industries, we offer a diverse range of certified materials that meet the stringent standards of USFDA, Excipact, GMP, ISO 9001, FSSAI, HALAL, and Kosher. Our products are compliant with global pharmacopeias, ensuring they support the pharmaceutical, nutraceutical, and food industries with the highest level of quality and regulatory excellence.</p>
+          <div class="product-tabs flex flex-nowrap overflow-x-auto gap-3 md:gap-4 mb-8 w-full max-w-full justify-center items-center" style="scrollbar-width: none; -ms-overflow-style: none;">
+            <button class="tab-btn active" data-category="all">
+              <span class="tab-label">All</span>
+            </button>
+            <button class="tab-btn" data-category="superdisintegrants">
+              <span class="tab-label">Superdisintegrants</span>
+            </button>
+            <button class="tab-btn" data-category="lubricants">
+              <span class="tab-label">Lubricants</span>
+            </button>
+            <button class="tab-btn" data-category="binders">
+              <span class="tab-label">Binders & Fillers</span>
+            </button>
+            <button class="tab-btn" data-category="foodnutra">
+              <span class="tab-label">Food & Nutra</span>
+            </button>
+            <button class="tab-btn" data-category="stabilizers">
+              <span class="tab-label">Stabilizer</span>
+            </button>
+            <button class="tab-btn" data-category="vitamin">
+              <span class="tab-label">Vitamin</span>
+            </button>
+          </div>
+          <style>
+          .product-tabs {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 0.5rem;
+            padding: 0.5rem 0.25rem;
+            /* background: #fff; */
+            border-radius: 1.5rem;
+            /* box-shadow: 0 2px 12px rgba(34,91,125,0.06); */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            justify-content: center;
+          }
+          .product-tabs::-webkit-scrollbar { display: none; }
+          .tab-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.08rem;
+            background: #f5f7fa;
+            border: 2px solid #e3eaf6;
+            border-radius: 2rem;
+            padding: 1rem 0.5rem;
+            margin: 0;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
+            cursor: pointer;
+            outline: none;
+            white-space: normal;
+            color: #205781;
+            min-width: 0;
+            width: 100%;
+            min-height: 48px;
+            box-shadow: none;
+            position: relative;
+            text-align: center;
+            line-height: 1.3;
+          }
+          @media (max-width: 1024px) {
+            .product-tabs {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 0.5rem;
+              padding: 0.3rem 0.1rem;
+              border-radius: 1rem;
+              justify-content: center;
+              overflow-x: visible;
+            }
+            .tab-btn {
+              min-width: 0;
+              max-width: 100%;
+              width: 100%;
+              font-size: 1rem;
+              padding: 0.9rem 0.3rem;
+              min-height: 44px;
+              margin-bottom: 0.3rem;
+            }
+          }
+          .tab-btn.active, .tab-btn:focus {
+            background: #ffebee !important;   /* light red background */
+            color: #d32f2f !important;        /* red text */
+            border: 2px solid #d32f2f !important; /* red border */
+            font-weight: 700;
+            box-shadow: 0 4px 16px rgba(211,47,47,0.10);
+            z-index: 1;
+          }
+          .tab-btn.active .tab-icon, .tab-btn:focus .tab-icon {
+            color: #d32f2f !important;        /* red icon */
+            opacity: 1;
+          }
+          .tab-btn:not(.active):hover {
+            background: #fde8e8;
+            color: #b71c1c;
+            border: 2px solid #b71c1c;
+          }
+          .tab-btn:not(.active):hover .tab-icon {
+            color: #b71c1c;
+            opacity: 0.9;
+          }
+          .tab-btn:focus-visible {
+            outline: 2px solid #d32f2f;
+            outline-offset: 2px;
+          }
+          #product-row {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+
+.border{
+  border-radius: 0.5rem;
+}
+@media (max-width: 768px) {
+  .tabcard{
+  display: flex;
+  flex-direction: column;
+  }
+}
+          </style>
+        </div>
+        <div class="relative">
+          <button id="scroll-left" class="hidden absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center text-[#205781] text-2xl hover:bg-[#205781] hover:text-white transition"><span>&larr;</span></button>
+          <div class="slick-carousel-new flex flex-row flex-nowrap justify-start items-stretch w-full max-w-full gap-6 overflow-x-auto scrollbar-hide scroll-smooth" id="product-row">
+            <!-- Superdisintegrants & Disintegrants -->
+            <div class="fancybox-item glass-card" data-category="superdisintegrants">
+              <div class="product-card-img-half" style="background-image: url('assets/images/products/photography/croscarmellosesodium/image-1.jpg');"></div>
+              <div class="product-card-content">
+                <h4>Croscarmellose Sodium</h4>
+                <p>A powerful superdisintegrant for rapid tablet dissolution.</p>
+                <a href="#" class="readmore-btn">Read More <span>&rarr;</span></a>
+              </div>
+            </div>
+            <div class="fancybox-item glass-card" data-category="superdisintegrants">
+                <div class="product-card-img-half" style="background-image: url('assets/images/products/photography/sodiumstarchglycolate/image-1.jpg');"></div>
+                <div class="product-card-content">
+                <h4>Sodium Starch Glycolate</h4>
+                <p>A superdisintegrant for fast tablet disintegration.</p>
+                <a href="#" class="readmore-btn">Read More <span>&rarr;</span></a>
+              </div>
+            </div>
+            <div class="fancybox-item glass-card" data-category="superdisintegrants">
+              <div class="product-card-img-half" style="background-image: url('assets/images/products/photography/calciumcarboxymethylcellulose/image-1.jpg');"></div>
+              <div class="product-card-content">
+                <h4>Calcium Carboxymethyl Cellulose</h4>
+                <p>Calcium Carboxymethyl Cellulose strengthens tablets while...</p>
+                <a href="#" class="readmore-btn">Read More <span>&rarr;</span></a>
+              </div>
+            </div>
+            <!-- Lubricants -->
+            <div class="fancybox-item glass-card" data-category="lubricants">
+              <div class="product-card-img-half" style="background-image: url('assets/images/products/photography/magnesiumstearate/image-1.jpg');"></div>
+              <div class="product-card-content">
+                <h4>Magnesium Stearate</h4>
+                <p>A lubricant to prevent tablet ingredients from sticking.</p>
+                <a href="#" class="readmore-btn">Read More <span>&rarr;</span></a>
+              </div>
+            </div>
+            <div class="fancybox-item glass-card" data-category="lubricants">
+              <div class="product-card-img-half" style="background-image: url('assets/images/products/photography/stearicacidpowder/image-1.jpg');"></div>
+              <div class="product-card-content">
+                <h4>Stearic Acid Powder</h4>
+                <p>Used as a lubricant and emulsifier in tablet formulations.</p>
+                <a href="#" class="readmore-btn">Read More <span>&rarr;</span></a>
+              </div>
+            </div>
+            <div class="fancybox-item glass-card" data-category="lubricants">
+              <div class="product-card-img-half" style="background-image: url('assets/images/products/photography/calciumcitrate/image-1.jpg');"></div>
+              <div class="product-card-content">
+                <h4>Calcium Stearate</h4>
+                <p>A flow agent and lubricant for powder processing.</p>
+                <a href="#" class="readmore-btn">Read More <span>&rarr;</span></a>
+              </div>
+            </div>
+            <!-- Binders & Fillers -->
+            <div class="fancybox-item glass-card" data-category="binders">
+              <div class="product-card-img-half" style="background-image: url('assets/images/products/photography/dibasiccalciumphosphate/image-1.jpg');"></div>
+              <div class="product-card-content">
+                <h4>Dibasic Calcium Phosphate</h4>
+                <p>Used as a filler and nutritional supplement in tablets.</p>
+                <a href="#" class="readmore-btn">Read More <span>&rarr;</span></a>
+              </div>
+            </div>
+            <div class="fancybox-item glass-card" data-category="binders">
+              <div class="product-card-img-half" style="background-image: url('assets/images/products/photography/microcrystallinecellulose/image-1.jpg');"></div>
+              <div class="product-card-content">
+                <h4>Microcrystalline Cellulose</h4>
+                <p>A versatile excipient for robust tablet formation.</p>
+                <a href="#" class="readmore-btn">Read More <span>&rarr;</span></a>
+              </div>
+            </div>
+            <div class="fancybox-item glass-card" data-category="binders">
+              <div class="product-card-img-half" style="background-image: url('assets/images/products/photography/mcc+cmc/image-1.jpg');"></div>
+              <div class="product-card-content">
+                <h4>Talc</h4>
+                <p>A pharmaceutical-grade glidant for powder flow.</p>
+                <a href="#" class="readmore-btn">Read More <span>&rarr;</span></a>
+              </div>
+            </div>
+           
+            <div class="fancybox-item glass-card" data-category="binders">
+              <div class="product-card-img-half" style="background-image: url('assets/images/products/photography/sodiumstarchglycolate/image-1.jpg');"></div>
+              <div class="product-card-content">
+                <h4>Calcium Carbonate</h4>
+                <p>Provides essential calcium supplementation and acts as a filler.</p>
+                <a href="#" class="readmore-btn">Read More <span>&rarr;</span></a>
+              </div>
+            </div>
+            <!-- Food & Nutra Supplements -->
+            <div class="fancybox-item glass-card" data-category="foodnutra">
+              <div class="product-card-img-half" style="background-image: url('assets/images/products/photography/calciumcitrate/image-1.jpg');"></div>
+              <div class="product-card-content">
+                <h4>Calcium Citrate</h4>
+                <p>A superior calcium supplement supporting bone health.</p>
+                <a href="#" class="readmore-btn">Read More <span>&rarr;</span></a>
+              </div>
+            </div>
+            <div class="fancybox-item glass-card" data-category="foodnutra">
+              <div class="product-card-img-half" style="background-image: url('assets/images/products/photography/crospovidone/image-1.jpg');"></div>
+              <div class="product-card-content">
+                <h4>Magnesium Citrate</h4>
+                <p>A magnesium supplement aiding muscle function.</p>
+                <a href="#" class="readmore-btn">Read More <span>&rarr;</span></a>
+              </div>
+            </div>
+            <div class="fancybox-item glass-card" data-category="foodnutra">
+              <div class="product-card-img-half" style="background-image: url('assets/images/products/photography/magnesiumglycinate/image-1.jpg');"></div>
+              <div class="product-card-content">
+                <h4>Magnesium Glycinate</h4>
+                <p>A highly bioavailable form of magnesium supplement.</p>
+                <a href="#" class="readmore-btn">Read More <span>&rarr;</span></a>
+              </div>
+            </div>
+           
+            <div class="fancybox-item glass-card" data-category="foodnutra">
+              <div class="product-card-img-half" style="background-image: url('assets/images/products/photography/microcrystallinecellulose/image-1.jpg');"></div>
+              <div class="product-card-content">
+                <h4>Potassium Citrate</h4>
+                <p>A potassium supplement aiding kidney health and balance.</p>
+                <a href="#" class="readmore-btn">Read More <span>&rarr;</span></a>
+              </div>
+            </div>
+            <div class="fancybox-item glass-card" data-category="foodnutra">
+              <div class="product-card-img-half" style="background-image: url('assets/images/products/photography/calciumcitrate/image-1.jpg');"></div>
+              <div class="product-card-content">
+                <h4>Calcium Citrate Malate</h4>
+                <p>A calcium supplement with enhanced absorption properties.</p>
+                <a href="#" class="readmore-btn">Read More <span>&rarr;</span></a>
+              </div>
+            </div>
+            <!-- Stabilizers & Thickening -->
+            <div class="fancybox-item glass-card" data-category="stabilizers">
+              <div class="product-card-img-half" style="background-image: url('assets/images/products/photography/mcc+cmc/image-1.jpg');"></div>
+              <div class="product-card-content">
+                <h4>MCC + CMC</h4>
+                <p>Co-processed excipient for improved tablet properties.</p>
+                <a href="#" class="readmore-btn">Read More <span>&rarr;</span></a>
+              </div>
+            </div>
+            <!-- Vitamin -->
+            <div class="fancybox-item glass-card" data-category="vitamin">
+              <div class="product-card-img-half" style="background-image: url('assets/images/products/photography/microcrystallinecellulose/image-1.jpg');"></div>
+              <div class="product-card-content">
+                <h4>Methylcobalamin (B12)</h4>
+                <p>A form of Vitamin B12 used in supplements and tablets.</p>
+                <a href="#" class="readmore-btn">Read More <span>&rarr;</span></a>
+              </div>
+            </div>
+          </div>
+          <button id="scroll-right" class="hidden absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center text-[#205781] text-2xl hover:bg-[#205781] hover:text-white transition"><span>&rarr;</span></button>
+          <div id="no-products-message" class="hidden text-center text-lg text-gray-500 py-12 w-full">No products found for this category.</div>
+        </div>
+        <style>
+        #product-row::-webkit-scrollbar { display: none; }
+        #product-row { -ms-overflow-style: none; scrollbar-width: none; scroll-behavior: smooth; }
+        </style>
+        <script>
+        $(function(){
+          function updateProductScrollArrows() {
+            var $row = $('#product-row');
+            var $cards = $row.children('.fancybox-item:visible');
+            if ($cards.length > 5) {
+              $('#scroll-left, #scroll-right').show();
+            } else {
+              $('#scroll-left, #scroll-right').hide();
+              $row.scrollLeft(0);
+            }
+          }
+          function filterProductsRow(category) {
+            var $row = $('#product-row');
+            var $cards = $row.children('.fancybox-item');
+            var $msg = $('#no-products-message');
+            $row.css('opacity', 0);
+            setTimeout(function() {
+              if (category === 'all') {
+                $cards.show();
+              } else {
+                $cards.hide();
+                $cards.filter('[data-category="' + category + '"]').show();
+              }
+              var visibleCount = $cards.filter(':visible').length;
+              if (visibleCount === 0) {
+                $row.hide();
+                $msg.show();
+              } else {
+                $row.show();
+                $msg.hide();
+              }
+              updateProductScrollArrows();
+              $row.css('opacity', 1);
+            }, 200);
+          }
+          $('.tab-btn').off('click').on('click', function(){
+            if ($(this).hasClass('active')) return;
+            $('.tab-btn').removeClass('active');
+            $(this).addClass('active');
+            var cat = $(this).data('category');
+            filterProductsRow(cat);
+            // On mobile, scroll tabs to the start so "All" is visible
+            if (window.innerWidth <= 600) {
+              document.querySelector('.product-tabs').scrollTo({ left: 0, behavior: 'smooth' });
+            }
+          });
+          // Default to 'All' tab
+          filterProductsRow('all');
+          // Arrow navigation (scroll by one card width + gap)
+          $('#scroll-right').off('click').on('click', function(){
+            var $row = $('#product-row');
+            var $card = $row.children('.fancybox-item:visible').first();
+            var cardWidth = $card.outerWidth(true) || 320 + 24; // fallback
+            $row[0].scrollBy({ left: cardWidth, behavior: 'smooth' });
+          });
+          $('#scroll-left').off('click').on('click', function(){
+            var $row = $('#product-row');
+            var $card = $row.children('.fancybox-item:visible').first();
+            var cardWidth = $card.outerWidth(true) || 320 + 24;
+            $row[0].scrollBy({ left: -cardWidth, behavior: 'smooth' });
+          });
+        });
+        </script>
+      </div>
+    </section>
+
+    <style>
+      #products-showcase {
+        background: linear-gradient(135deg, #e3eaf6 0%, #c7e0f7 60%, #b3d8f7 100%);
+        position: relative;
+        z-index: 1;
+      }
+      .glass-card {
+        width: 320px !important;
+        min-width: 320px !important;
+        max-width: 320px !important;
+        height: 420px !important;
+        min-height: 420px !important;
+        max-height: 420px !important;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background: rgba(255,255,255,0.65);
+        border-radius: 0.5rem;
+        border: 1.5px solid #e3eaf6;
+        box-shadow: 0 8px 32px rgba(34,91,125,0.10);
+        backdrop-filter: blur(8px);
+        transition: box-shadow 0.25s, transform 0.25s;
+        padding: 0;
+        margin-bottom: 0;
+        position: relative;
+      }
+      .product-card-img-half {
+        width: 100%;
+        height: 50%;
+        min-height: 140px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+      .product-card-content {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+        text-align: center;
+      }
+      .glass-card:hover {
+        box-shadow: 0 16px 48px rgba(34,91,125,0.18);
+        transform: translateY(-10px) scale(1.04);
+        z-index: 2;
+      }
+      .product-img-area {
+        width: 120px;
+        height: 120px;
+        background: linear-gradient(135deg, #e3eaf6 60%, #c7e0f7 100%);
+        border-radius: 1.5rem 1.5rem 2.5rem 2.5rem/1.5rem 1.5rem 3rem 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.2rem auto;
+        box-shadow: 0 4px 16px rgba(34,91,125,0.10);
+        border: 2px solid #fff;
+        overflow: hidden;
+        position: relative;
+      }
+      .product-img-area img {
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+        border-radius: 1rem;
+        background: #fff;
+        box-shadow: 0 1px 4px rgba(34,91,125,0.06);
+        display: block;
+      }
+      .glass-card h4 {
+        font-size: 1.18rem;
+        font-weight: 800;
+        color: #205781;
+        margin-bottom: 0.6rem;
+        text-align: center;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .glass-card p {
+        color: #52617A;
+        font-size: 1.01rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-height: 44px;
+        max-height: 44px;
+      }
+      .readmore-btn {
+        display: inline-flex;
+        align-items: center;
+        border: 1.5px solid #205781;
+        color: #205781;
+        background: #fff;
+        border-radius: 0.5rem;
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+        transition: background 0.2s, color 0.2s, border 0.2s;
+        box-shadow: 0 1px 4px rgba(34,91,125,0.06);
+        cursor: pointer;
+        text-decoration: none;
+        margin-top: auto;
+      }
+      .readmore-btn span:last-child {
+        margin-left: 0.5rem;
+        font-size: 1.2em;
+        transition: transform 0.2s;
+      }
+      .readmore-btn:hover, .readmore-btn:focus {
+        background: #205781;
+        color: #fff;
+        border-color: #205781;
+      }
+      .readmore-btn:hover span:last-child {
+        transform: translateX(4px);
+      }
+      .slick-carousel-new {
+    width: 100%;
+    max-width: 100%;
+}
+      .slick-list {
+        overflow: hidden !important;
+        padding: 0 !important;
+        margin: 0;
+      }
+      .slick-slide {
+        margin: 0 16px;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+      }
+      .glass-arrow {
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        transform: translateY(-50%);
+        background: rgba(255,255,255,0.7);
+        border: none;
+        border-radius: 50%;
+        box-shadow: 0 4px 16px rgba(34,91,125,0.12);
+        width: 54px;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: #205781;
+        transition: box-shadow 0.2s, background 0.2s;
+        cursor: pointer;
+        border: 1.5px solid #e3eaf6;
+      }
+      .slick-prev.glass-arrow { left: -32px; }
+      .slick-next.glass-arrow { right: -32px; }
+      .glass-arrow:hover {
+        box-shadow: 0 8px 24px rgba(34,91,125,0.18);
+        background: #e3eaf6;
+        color: #17496b;
+      }
+      @media screen and (min-width: 576px) and (max-width: 767px) {
+        .glass-card {
+          width: 100vw !important;
+          min-width: 100vw !important;
+          max-width: 100vw !important;
+        }
+      }
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+        .glass-card {
+          width: 50vw !important;
+          min-width: 50vw !important;
+          max-width: 50vw !important;
+        }
+      }
+      @media screen and (min-width: 1024px) and (max-width: 1279px) {
+        .glass-card {
+          width: 320px !important;
+          min-width: 320px !important;
+          max-width: 320px !important;
+        }
+      }
+      @media screen and (min-width: 1280px) {
+        .glass-card {
+          width: 320px !important;
+          min-width: 320px !important;
+          max-width: 320px !important;
+        }
+      }
+    </style>
+    <script>
+    $(function() {
+      var $row = $('#product-row');
+      if ($row.hasClass('slick-initialized')) {
+        $row.slick('unslick');
+      }
+      $row.slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        initialSlide: 0,
+        centerMode: false,
+        variableWidth: false,
+        focusOnSelect: true,
+        arrows: true,
+        prevArrow: $('#scroll-left'),
+        nextArrow: $('#scroll-right'),
+        responsive: [
+          { breakpoint: 991, settings: { slidesToShow: 2 } },
+          { breakpoint: 600, settings: { slidesToShow: 1 } }
+        ]
+      });
+    });
+    </script>
+
+
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="section-title text-gray-800">What Our Clients Say</h2>
+            <p class="section-subtitle text-gray-600">Hear from those who have experienced our commitment to excellence.</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="card p-6">
+                    <p class="text-lg text-gray-700 mb-4 italic">"Parchin Group has consistently delivered high-quality products and exceptional service. Their dedication to innovation is truly commendable."</p>
+                    <p class="font-semibold text-blue-700">- Jane Doe, CEO of Innovate Corp.</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="card p-6">
+                    <p class="text-lg text-gray-700 mb-4 italic">"Working with Parchin Group has been a game-changer for our supply chain. Their efficiency and reliability are unmatched."</p>
+                    <p class="font-semibold text-blue-700">- John Smith, Operations Director at Global Logistics</p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="card p-6">
+                    <p class="text-lg text-gray-700 mb-4 italic">"The team at Parchin Group goes above and beyond. Their expertise and customer-centric approach make them a valuable partner."</p>
+                    <p class="font-semibold text-blue-700">- Emily White, Founder of EcoSolutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Carousel Section -->
+<section id="certificates" class="py-16 bg-gradient-to-br from-[#e3eaf6] via-[#c7e0f7] to-[#b3d8f7] relative">
+  <div class="container mx-auto px-2 sm:px-4 md:px-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-[#205781] text-center mb-4 drop-shadow-lg tracking-tight">Our Certifications</h2>
+    <p class="text-lg text-[#3a6ea5] font-medium text-center mb-12 max-w-2xl mx-auto">We uphold strict quality and compliance protocols, ensuring every product meets international standards. Our certifications prove our commitment to safe, consistent, and responsible manufacturing.</p>
+    <div class="relative flex items-center">
+      <button id="cert-scroll-left" class="cert-arrow absolute left-0 z-10 bg-white shadow-lg rounded-full w-10 h-10 items-center justify-center text-[#205781] text-2xl hover:bg-[#205781] hover:text-white transition" aria-label="Scroll left"><span>&larr;</span></button>
+      <div class="flex flex-row flex-nowrap gap-6 overflow-x-auto pb-4 scrollbar-hide scroll-smooth mx-auto" id="certificates-row" style="scrollbar-width: none; -ms-overflow-style: none;">
+        <!-- ISO 14001 -->
+        <div class="cert-card-custom">
+          <div class="cert-card-icon"><img src="assets/images/certificates/ISO_14001.png" alt="Certificate Icon"></div>
+          <h3 class="cert-card-title">ISO 14001</h3>
+          <p class="cert-card-desc">We take environmental responsibility seriously. By choosing us, you support a company focused on minimizing its environmental impact.</p>
+          <a href="assets/Pdf/ISO 14001 2015.pdf" class="cert-card-btn" download>Download Certificate</a>
+        </div>
+        <!-- ISO 22000 -->
+        <div class="cert-card-custom">
+          <div class="cert-card-icon"><img src="assets/images/certificates/Untitled-2-03.png" alt="Certificate Icon"></div>
+          <h3 class="cert-card-title">ISO 22000</h3>
+          <p class="cert-card-desc">If your products require food-grade ingredients, our ISO 22000 certification assures you that our excipients meet the most rigorous food safety...</p>
+          <a href="assets/Pdf/IS0 22000 2018.pdf" class="cert-card-btn" download>Download Certificate</a>
+        </div>
+        <!-- GMP -->
+        <div class="cert-card-custom">
+          <div class="cert-card-icon"><img src="assets/images/certificates/Untitled-2-07.png" alt="Certificate Icon"></div>
+          <h3 class="cert-card-title">GMP</h3>
+          <p class="cert-card-desc">Our GMP certification assures you that our excipients are consistently produced to the highest standards for pharmaceutical safety and efficacy.</p>
+          <a href="assets/Pdf/GMP_PRACHIN PHARMACHEM(P) Ltd..pdf" class="cert-card-btn" download>Download Certificate</a>
+        </div>
+        <!-- ISO 9001 -->
+        <div class="cert-card-custom">
+          <div class="cert-card-icon"><img src="assets/images/certificates/Untitled-2-01.png" alt="Certificate Icon"></div>
+          <h3 class="cert-card-title">ISO 9001</h3>
+          <p class="cert-card-desc">Our ISO 9001 certification means you can trust us to deliver consistently high-quality excipients, along with excellent service and support.</p>
+          <a href="assets/Pdf/ISO 9001 2015+HACCP.pdf" class="cert-card-btn" download>Download Certificate</a>
+        </div>
+        <!-- USDMF -->
+        <div class="cert-card-custom">
+          <div class="cert-card-icon"><img src="assets/images/certificates/Untitled-2-05.png" alt="Certificate Icon"></div>
+          <h3 class="cert-card-title">USDMF</h3>
+          <p class="cert-card-desc">We've got the green light to supply excipients for drugs sold in the US market. This means our products meet the highest regulatory standards recognized...</p>
+          <a href="#" class="cert-card-btn" download>Download Certificate</a>
+        </div>
+        <!-- Exipact -->
+        <div class="cert-card-custom">
+          <div class="cert-card-icon"><img src="assets/images/certificates/Untitled-2-04.png" alt="Certificate Icon"></div>
+          <h3 class="cert-card-title">Exipact</h3>
+          <p class="cert-card-desc">This is a highly recognized certification program within the European market, especially valued by pharmaceutical manufacturers.</p>
+          <a href="#" class="cert-card-btn" download>Download Certificate</a>
+        </div>
+        <!-- Chinese DMF -->
+        <div class="cert-card-custom">
+          <div class="cert-card-icon"><img src="assets/images/certificates/chin.png" alt="Certificate Icon"></div>
+          <h3 class="cert-card-title">Chinese DMF</h3>
+          <p class="cert-card-desc">We're certified to supply the Chinese market as well! This means you can use our excipients in your drug products with confidence, wherever your market.</p>
+          <a href="#" class="cert-card-btn" download>Download Certificate</a>
+        </div>
+        <!-- HALAL -->
+        <div class="cert-card-custom">
+          <div class="cert-card-icon"><img src="assets/images/certificates/halal.png" alt="Certificate Icon"></div>
+          <h3 class="cert-card-title">HALAL</h3>
+          <p class="cert-card-desc">Our HALAL certification means our products can be safely used in formulations intended for customers who follow Islamic dietary guidelines.</p>
+          <a href="assets/Pdf/HALAL..pdf" class="cert-card-btn" download>Download Certificate</a>
+        </div>
+        <!-- Kosher -->
+        <div class="cert-card-custom">
+          <div class="cert-card-icon"><img src="assets/images/certificates/keniseth.jpg" alt="Certificate Icon"></div>
+          <h3 class="cert-card-title">Kosher</h3>
+          <p class="cert-card-desc">Our Kosher certification lets you use our excipients without concern. This expands your potential markets and aligns with customer values.</p>
+          <a href="assets/Pdf/CCS Kosher.pdf" class="cert-card-btn" download>Download Certificate</a>
+        </div>
+        <!-- FSSAI -->
+        <div class="cert-card-custom">
+          <div class="cert-card-icon"><img src="assets/images/certificates/Untitled-2-10.png" alt="Certificate Icon"></div>
+          <h3 class="cert-card-title">FSSAI</h3>
+          <p class="cert-card-desc">The Indian market is important to us. Our FSSAI certification means we fully adhere to Indian food safety standards and regulations.</p>
+          <a href="#" class="cert-card-btn" download>Download Certificate</a>
+        </div>
+        <!-- HACCP -->
+        <div class="cert-card-custom">
+          <div class="cert-card-icon"><img src="assets/images/certificates/Untitled-2-11.png" alt="Certificate Icon"></div>
+          <h3 class="cert-card-title">HACCP</h3>
+          <p class="cert-card-desc">A systematic preventive approach ensuring food safety by identifying, assessing, and controlling hazards throughout the production process.</p>
+          <a href="#" class="cert-card-btn" download>Download Certificate</a>
+        </div>
+        <!-- UKAS -->
+        <div class="cert-card-custom">
+          <div class="cert-card-icon"><img src="assets/images/certificates/Untitled-2-12.png" alt="Certificate Icon"></div>
+          <h3 class="cert-card-title">UKAS</h3>
+          <p class="cert-card-desc">The United Kingdom Accreditation Service provides accreditation, ensuring organizations meet international standards for quality and safety.</p>
+          <a href="#" class="cert-card-btn" download>Download Certificate</a>
+        </div>
+        <!-- URS -->
+        <div class="cert-card-custom">
+          <div class="cert-card-icon"><img src="assets/images/certificates/Untitled-2-13.png" alt="Certificate Icon"></div>
+          <h3 class="cert-card-title">URS</h3>
+          <p class="cert-card-desc">Universal Registrars Services offers global certification services, verifying compliance with international quality management systems.</p>
+          <a href="#" class="cert-card-btn" download>Download Certificate</a>
+        </div>
+      </div>
+      <button id="cert-scroll-right" class="cert-arrow absolute right-0 z-10 bg-white shadow-lg rounded-full w-10 h-10 items-center justify-center text-[#205781] text-2xl hover:bg-[#205781] hover:text-white transition" aria-label="Scroll right"><span>&rarr;</span></button>
+    </div>
+    <style>
+      #certificates-row::-webkit-scrollbar { display: none; }
+      #certificates-row { -ms-overflow-style: none; scrollbar-width: none; scroll-behavior: smooth; }
+      .cert-card-custom {
+        background: #fff; border-radius: 0.5rem; box-shadow: 0 8px 32px rgba(34,91,125,0.10);
+        border: 1.5px solid #e3eaf6; display: flex; flex-direction: column; align-items: center; text-align: center;
+        padding: 2rem 1.25rem 1.5rem 1.25rem; margin-bottom: 0; position: relative;
+        min-width: 320px; max-width: 320px; width: 320px;
+      }
+      .cert-card-icon {
+         border-radius: 50%; display: flex; align-items: center; justify-content: center;
+        margin-bottom: 1.2rem; 
+      }
+      .cert-card-icon img {
+        width: 80px;
+        height: auto;
+        object-fit: contain;
+      }
+      .cert-card-icon-text { font-size: 1.5rem; font-weight: 800; color: #205781; }
+      .cert-card-title { font-size: 1.18rem; font-weight: 800; color: #205781; margin-bottom: 0.6rem; }
+      .cert-card-desc { color: #52617A; font-size: 1.01rem; margin-bottom: 1.5rem; min-height: 44px; }
+      .cert-card-btn {
+        display: inline-flex; align-items: center; justify-content: center;
+        border: 1.5px solid #205781; color: #fff; background: #205781;
+        border-radius: 0.5rem; font-weight: 700; font-size: 1rem; padding: 0.5rem 1.5rem;
+        transition: background 0.2s, color 0.2s, border 0.2s; box-shadow: 0 1px 4px rgba(34,91,125,0.06);
+        cursor: pointer; text-decoration: none; margin-top: auto; width: 100%;
+      }
+      .cert-card-btn:hover, .cert-card-btn:focus {
+        background: #fff; color: #205781; border-color: #205781;
+      }
+      .cert-arrow {
+        top: 50%; transform: translateY(-50%); display: flex !important;
+      }
+      @media (max-width: 1023px) {
+        .cert-card-custom {
+          min-width: 48vw !important; max-width: 48vw !important; width: 48vw !important;
+        }
+      }
+      @media (max-width: 767px) {
+        .cert-card-custom {
+          min-width: 96vw !important; max-width: 96vw !important; width: 96vw !important; padding: 1.2rem 0.5rem 1.2rem 0.5rem; border-radius: 1.2rem;
+        }
+        .cert-card-title { font-size: 1.1rem; }
+        .cert-card-icon { width: 56px; height: 56px; margin-bottom: 0.7rem; }
+        .cert-card-desc { font-size: 0.98rem; margin-bottom: 0.7rem; }
+        .cert-card-btn { font-size: 0.98rem; padding: 0.5rem 1rem; }
+      }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var row = document.getElementById('certificates-row');
+        var leftBtn = document.getElementById('cert-scroll-left');
+        var rightBtn = document.getElementById('cert-scroll-right');
+        function getCardWidth() {
+          var card = row.querySelector('.cert-card-custom');
+          if (!card) return 320;
+          var style = window.getComputedStyle(card);
+          var width = card.offsetWidth + parseInt(style.marginRight || 0) + parseInt(style.marginLeft || 0);
+          return width;
+        }
+        function updateArrows() {
+          if (!row) return;
+          if (row.scrollWidth > row.clientWidth + 10) {
+            leftBtn.style.display = 'flex';
+            rightBtn.style.display = 'flex';
+          } else {
+            leftBtn.style.display = 'none';
+            rightBtn.style.display = 'none';
+          }
+        }
+        function scrollByCard(dir) {
+          var cardWidth = getCardWidth();
+          row.scrollBy({ left: dir * cardWidth, behavior: 'smooth' });
+        }
+        leftBtn.addEventListener('click', function() { scrollByCard(-1); });
+        rightBtn.addEventListener('click', function() { scrollByCard(1); });
+        window.addEventListener('resize', updateArrows);
+        setTimeout(updateArrows, 300);
+      });
+    </script>
+  </div>
+</section>
+
+<!-- ... existing code ... -->
+
+
+    <!-- Commented out Our Group Companies section as requested
+    <section id="companies" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="section-title fade-in-up">Our Group Companies</h2>
+                <p class="section-subtitle fade-in-up" style="animation-delay: 0.2s;">
+                    Parchin Group proudly encompasses a diverse portfolio of companies, each a leader and innovator in its respective field.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 stagger-fade-in-up">
+                <div class="card p-6 flex flex-col md:flex-row items-start md:items-center" style="animation-delay: 0.4s;">
+                    <img src="https://placehold.co/160x160/1E40AF/FFFFFF?text=PC&font=inter" alt="Prachin Chemicals Logo" class="w-28 h-28 md:w-32 md:h-32 rounded-lg object-cover mb-4 md:mb-0 md:mr-6 shadow-md border-4 border-white flex-shrink-0">
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-blue-700 mb-3">Prachin Chemicals</h3>
+                        <p class="text-gray-600 mb-5 leading-relaxed">
+                            A leading name in the chemical industry, Prachin Chemicals is dedicated to providing high-quality chemical products and innovative solutions. With a strong focus on R&D and customer satisfaction, we serve a wide array of global industries.
+                        </p>
+                        <a href="http://prachin.voscart.com" target="_blank" rel="noopener noreferrer" class="cta-button inline-flex items-center text-sm">
+                            Visit Prachin Chemicals <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card p-8 flex flex-col md:flex-row items-start md:items-center" style="animation-delay: 0.6s;">
+                     <img src="https://placehold.co/160x160/059669/FFFFFF?text=FV&font=inter" alt="Another Group Company Logo" class="w-32 h-32 md:w-36 md:h-36 rounded-lg object-cover mb-6 md:mb-0 md:mr-8 shadow-md border-4 border-white flex-shrink-0">
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-green-700 mb-3">Future Ventures Inc. <span class="text-sm text-gray-500">(Example)</span></h3>
+                        <p class="text-gray-600 mb-5 leading-relaxed">
+                            Exploring new frontiers in technology and sustainable solutions. Future Ventures is committed to pioneering innovations that shape a better tomorrow. (This is a placeholder for another group entity).
+                        </p>
+                        <a href="#" class="bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-md font-semibold inline-flex items-center transition duration-300 text-sm hover:scale-105">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <section id="services" class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="section-title fade-in-up">Our Core Focus</h2>
+                <p class="section-subtitle fade-in-up" style="animation-delay: 0.2s;">
+                    We are committed to excellence across our diverse operations, focusing on key areas that drive innovation, growth, and create lasting value.
+                </p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center stagger-fade-in-up">
+                <div class="p-6" style="animation-delay: 0.4s;">
+                    <div class="icon-circle bg-blue-100 text-blue-600">
+                        <i class="fas fa-industry fa-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Industrial Solutions</h3>
+                    <p class="text-gray-600 leading-relaxed">Providing robust and efficient solutions for diverse industrial sectors.</p>
+                </div>
+                <div class="p-6" style="animation-delay: 0.6s;">
+                    <div class="icon-circle bg-green-100 text-green-600">
+                        <i class="fas fa-flask fa-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Chemical Manufacturing</h3>
+                    <p class="text-gray-600 leading-relaxed">Excellence in chemical production, research, and distribution.</p>
+                </div>
+                <div class="p-6" style="animation-delay: 0.8s;">
+                    <div class="icon-circle bg-purple-100 text-purple-600">
+                        <i class="fas fa-cogs fa-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Technological Innovation</h3>
+                    <p class="text-gray-600 leading-relaxed">Investing in R&D for cutting-edge advancements and solutions.</p>
+                </div>
+                <div class="p-6" style="animation-delay: 1.0s;">
+                    <div class="icon-circle bg-yellow-100 text-yellow-600">
+                        <i class="fas fa-leaf fa-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Sustainable Practices</h3>
+                    <p class="text-gray-600 leading-relaxed">Committed to environmentally responsible and sustainable operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- General Inquiry Form Section (Wider Email Field and Card) -->
+    <section id="contact" class="py-10 sm:py-12 md:py-16 bg-white">
+      <div class="container mx-auto px-2 sm:px-4 md:px-6">
+        <div class="contact-glass-card p-4 sm:p-6 md:px-12 md:py-10 lg:px-20 rounded-2xl md:rounded-xl shadow-2xl md:shadow-2xl drop-shadow-2xl w-full max-w-4xl mx-auto flex flex-col items-center justify-center" style="box-shadow: 0 8px 40px 0 rgba(32, 87, 129, 0.15), 0 1.5px 8px 0 rgba(32, 87, 129, 0.08);">
+          <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#205781] mb-1 sm:mb-2 text-center w-full">Contact Form</h2>
+          <p class="text-sm sm:text-base md:text-lg text-[#3a6ea5] mb-5 sm:mb-8 text-center w-full">Submit your inquiry today and let's discuss how we can meet your needs!</p>
+          <form class="w-full flex flex-col items-center" action="submit_form.php" method="POST" autocomplete="off">
+            <div class="flex flex-col gap-4 sm:gap-5 md:gap-6 mb-5 sm:mb-6 w-full items-center">
+              <div class="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-3 md:gap-6 w-full items-center">
+                <div class="flex-1 flex flex-col items-center w-full min-w-0 max-w-xs md:max-w-lg md:basis-1/4">
+                  <label for="inq-name" class="text-xs sm:text-sm font-semibold text-[#205781] mb-1 self-start">Name<span class="text-red-500">*</span></label>
+                  <input type="text" id="inq-name" name="name" placeholder="Your Name" required class="w-full border border-gray-300 rounded-lg md:rounded-lg px-3 py-2 sm:py-3 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#205781] text-gray-700 bg-white text-sm sm:text-base md:text-base" />
+                </div>
+                <div class="flex-1 flex flex-col items-center w-full min-w-0 max-w-xs md:max-w-lg md:basis-2/5">
+                  <label for="inq-email" class="text-xs sm:text-sm font-semibold text-[#205781] mb-1 self-start">Email<span class="text-red-500">*</span></label>
+                  <input type="email" id="inq-email" name="email" placeholder="you@example.com" required class="w-full border border-gray-300 rounded-lg md:rounded-lg px-3 py-2 sm:py-3 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#205781] text-gray-700 bg-white text-sm sm:text-base md:text-base" />
+                </div>
+                <div class="flex-1 flex flex-col items-center w-full min-w-0 max-w-xs md:max-w-lg md:basis-1/4">
+                  <label for="inq-phone" class="text-xs sm:text-sm font-semibold text-[#205781] mb-1 self-start">Phone<span class="text-red-500">*</span></label>
+                  <input type="tel" id="inq-phone" name="phone" placeholder="Phone" required class="w-full border border-gray-300 rounded-lg md:rounded-lg px-3 py-2 sm:py-3 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#205781] text-gray-700 bg-white text-sm sm:text-base md:text-base" />
+                </div>
+              </div>
+              <div class="flex flex-col items-center w-full max-w-full md:max-w-2xl mb-4">
+                <label for="inq-products" class="text-xs sm:text-sm font-semibold text-[#205781] mb-1 self-start">Products of Interest<span class="text-red-500">*</span></label>
+                <div class="product-checkbox-container w-full border border-gray-300 rounded-lg md:rounded-lg px-4 py-3 bg-white overflow-y-auto" style="max-height: 200px;">
+                  <div class="product-checkbox mb-2">
+                    <input type="checkbox" id="product-1" name="products[]" value="Croscarmellose Sodium" class="mr-2">
+                    <label for="product-1" class="text-sm sm:text-base">Croscarmellose Sodium</label>
+                  </div>
+                  <div class="product-checkbox mb-2">
+                    <input type="checkbox" id="product-2" name="products[]" value="Dibasic Calcium Phosphate" class="mr-2">
+                    <label for="product-2" class="text-sm sm:text-base">Dibasic Calcium Phosphate</label>
+                  </div>
+                  <div class="product-checkbox mb-2">
+                    <input type="checkbox" id="product-3" name="products[]" value="Magnesium Stearate" class="mr-2">
+                    <label for="product-3" class="text-sm sm:text-base">Magnesium Stearate</label>
+                  </div>
+                  <div class="product-checkbox mb-2">
+                    <input type="checkbox" id="product-4" name="products[]" value="Microcrystalline Cellulose" class="mr-2">
+                    <label for="product-4" class="text-sm sm:text-base">Microcrystalline Cellulose</label>
+                  </div>
+                  <div class="product-checkbox mb-2">
+                    <input type="checkbox" id="product-5" name="products[]" value="Microcrystalline Cellulose + Carboxymethyl Cellulose" class="mr-2">
+                    <label for="product-5" class="text-sm sm:text-base">Microcrystalline Cellulose + Carboxymethyl Cellulose</label>
+                  </div>
+                  <div class="product-checkbox mb-2">
+                    <input type="checkbox" id="product-6" name="products[]" value="Stearic Acid Powder" class="mr-2">
+                    <label for="product-6" class="text-sm sm:text-base">Stearic Acid Powder</label>
+                  </div>
+                  <div class="product-checkbox mb-2">
+                    <input type="checkbox" id="product-7" name="products[]" value="Calcium Stearate" class="mr-2">
+                    <label for="product-7" class="text-sm sm:text-base">Calcium Stearate</label>
+                  </div>
+                  <div class="product-checkbox mb-2">
+                    <input type="checkbox" id="product-8" name="products[]" value="Sodium Starch Glycolate" class="mr-2">
+                    <label for="product-8" class="text-sm sm:text-base">Sodium Starch Glycolate</label>
+                  </div>
+                  <div class="product-checkbox mb-2">
+                    <input type="checkbox" id="product-9" name="products[]" value="Calcium Citrate" class="mr-2">
+                    <label for="product-9" class="text-sm sm:text-base">Calcium Citrate</label>
+                  </div>
+                  <div class="product-checkbox mb-2">
+                    <input type="checkbox" id="product-10" name="products[]" value="Magnesium Citrate" class="mr-2">
+                    <label for="product-10" class="text-sm sm:text-base">Magnesium Citrate</label>
+                  </div>
+                  <div class="product-checkbox mb-2">
+                    <input type="checkbox" id="product-11" name="products[]" value="Calcium Carbonate" class="mr-2">
+                    <label for="product-11" class="text-sm sm:text-base">Calcium Carbonate</label>
+                  </div>
+                  <div class="product-checkbox mb-2">
+                    <input type="checkbox" id="product-12" name="products[]" value="Talc" class="mr-2">
+                    <label for="product-12" class="text-sm sm:text-base">Talc</label>
+                  </div>
+                  <div class="product-checkbox mb-2">
+                    <input type="checkbox" id="product-13" name="products[]" value="Calcium Carboxymethyl Cellulose" class="mr-2">
+                    <label for="product-13" class="text-sm sm:text-base">Calcium Carboxymethyl Cellulose</label>
+                  </div>
+                </div>
+                <small class="text-gray-500 text-xs mt-1 self-start">Tap on products to select multiple options</small>
+              </div>
+              <div class="flex flex-col items-center w-full max-w-full md:max-w-2xl">
+                <label for="inq-details" class="text-xs sm:text-sm font-semibold text-[#205781] mb-1 self-start">Additional Details</label>
+                <textarea id="inq-details" name="details" rows="4" placeholder="How can we help you?" class="w-full border border-gray-300 rounded-lg md:rounded-lg px-3 py-2 sm:py-3 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#205781] text-gray-700 bg-white text-sm sm:text-base md:text-base resize-none"></textarea>
+              </div>
+            </div>
+            <div class="w-full md:max-w-2xl mx-auto mt-4">
+              <button type="submit" class="w-full bg-[#c41a1b] hover:bg-[#a31515] text-white font-bold text-lg md:text-xl py-5 md:py-4 rounded-lg transition-all duration-200 flex items-center justify-center shadow-md active:scale-95">
+                Submit Request <span class="ml-2"><i class="fas fa-arrow-right"></i></span>
+              </button>
+            </div>
+          </form>
+          <div class="w-full border-t border-gray-200 mt-8 pt-6 flex flex-col items-center">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-4 w-full">
+              <span class="text-[#205781] font-semibold text-base md:text-lg flex items-center"><i class="fas fa-phone-alt mr-2"></i>+1 (908) 257-1897</span>
+              <span class="hidden md:block text-gray-300 text-2xl font-bold">|</span>
+              <span class="text-[#205781] font-semibold text-base md:text-lg flex items-center">
+                <i class="fas fa-envelope mr-2"></i>info@prachinchemicalinc.com
+              </span>
+            </div>
+            <div class="text-[#205781] font-medium text-base md:text-lg mb-4 flex items-center justify-center"><i class="fas fa-map-marker-alt mr-2"></i>25 Cotters Ln Ste A, East Brunswick, NJ 08816.</div>
+            <div class="flex gap-4 mt-2">
+              <a href="mailto:info@prachinchemicalinc.com" class="contact-info-social" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              <a href="#" class="contact-info-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="contact-info-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End General Inquiry Form Section -->
+
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4 flex flex-col items-center">
+        <h2 class="text-4xl font-extrabold text-[#205781] mb-2 text-center">From Our Facilities To Your Markets</h2>
+        <p class="text-lg text-gray-600 mb-8 text-center max-w-2xl">
+          Across Regions, our expansive distribution chain guarantees efficient supply of consistent, high-grade excipients across diverse markets.
+        </p>
+        <div class="w-full flex justify-center">
+          <div class="relative w-full max-w-4xl">
+            <img 
+              src="assets/images/company/Group_map.png" 
+              alt="Global Distribution Map" 
+              class="rounded-3xl w-full object-cover"
+            />
+            <!-- Example Location Markers -->
+            <button
+              class="absolute z-10"
+              style="top: 22%; left: 22%;"
+              onclick="showMapTooltip(event, 'New Jersey, USA')"
+              aria-label="New Jersey, USA"
+            >
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full   border-[#205781]  text-[#e53935] text-xl hover:scale-110 transition">
+                <i class="fas fa-map-marker-alt"></i>
+              </span>
+            </button>
+            <!-- <button
+              class="absolute z-10"
+              style="top: 70%; left: 30%;"
+              onclick="showMapTooltip(event, 'São Paulo, Brazil')"
+              aria-label="São Paulo, Brazil"
+            >
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white border-2 border-[#205781] shadow text-[#e53935] text-xl hover:scale-110 transition">
+                <i class="fas fa-map-marker-alt"></i>
+              </span>
+            </button> -->
+            <!-- Add more markers as needed, adjusting top/left for each location -->
+            <!-- Tooltip -->
+            <div id="map-tooltip" class="hidden absolute bg-white border border-[#205781] rounded-lg px-4 py-2 text-[#205781] font-bold shadow-lg z-20"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      function showMapTooltip(event, location) {
+        const tooltip = document.getElementById('map-tooltip');
+        tooltip.textContent = location;
+        tooltip.style.display = 'block';
+        // Position tooltip near the marker
+        const parentRect = event.currentTarget.parentElement.getBoundingClientRect();
+        const btnRect = event.currentTarget.getBoundingClientRect();
+        tooltip.style.left = (btnRect.left - parentRect.left + btnRect.width / 2 - tooltip.offsetWidth / 2) + 'px';
+        tooltip.style.top = (btnRect.top - parentRect.top - tooltip.offsetHeight - 10) + 'px';
+        // Hide after 2 seconds
+        clearTimeout(window._mapTooltipTimeout);
+        window._mapTooltipTimeout = setTimeout(() => {
+          tooltip.style.display = 'none';
+        }, 2000);
+      }
+    </script>
+   
+    <div id="footer-dynamic"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('footer-dynamic').innerHTML = html;
+            // Optionally, re-run footer.js if needed for dynamic population
+            var script = document.createElement('script');
+            script.src = 'js/footer-dynamic.js';
+            document.body.appendChild(script);
+            
+            // Force display of Quick Links section after a short delay
+            setTimeout(function() {
+              var quickLinks = document.querySelector('[aria-labelledby="quicklinks-label"]');
+              if (quickLinks) {
+                console.log('Quick Links section found');
+                quickLinks.style.display = 'block';
+                quickLinks.style.visibility = 'visible';
+                quickLinks.style.opacity = '1';
+                quickLinks.style.zIndex = '100';
+              } else {
+                console.log('Quick Links section not found');
+              }
+            }, 1000);
+          });
+      });
+    </script>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('scrollTopBtn');
+    if (!btn) return;
+
+    // Hide by default
+    btn.style.display = 'none';
+
+    // Show/hide the button on scroll
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 200) {
+        btn.style.display = 'flex';
+      } else {
+        btn.style.display = 'none';
+      }
+    });
+
+    // Scroll to top on click
+    btn.onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  });
+</script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Mobile products submenu toggle
+            const productsToggle = document.getElementById('products-toggle');
+            const productsSubmenu = document.getElementById('products-submenu');
+            const productsChevron = document.getElementById('products-chevron');
+
+            if (productsToggle && productsSubmenu && productsChevron) {
+                productsToggle.addEventListener('click', function () {
+                    productsSubmenu.classList.toggle('hidden');
+                    productsChevron.classList.toggle('rotate-180');
+                });
+            }
+
+            // Full width products dropdown (hover-based)
+            const productsTrigger = document.getElementById('products-trigger');
+            const productsOverlay = document.getElementById('products-overlay');
+
+            if (productsTrigger && productsOverlay) {
+                // Add group class to make hover work
+                productsTrigger.parentElement.classList.add('group');
+                
+                // Category switching functionality
+                const categoryTabs = document.querySelectorAll('.category-tab');
+                const categoryContents = document.querySelectorAll('.category-content');
+                
+                categoryTabs.forEach(tab => {
+                    tab.addEventListener('click', function() {
+                        const targetCategory = this.getAttribute('data-category');
+                        
+                        // Update tab styles
+                        categoryTabs.forEach(t => {
+                            t.classList.remove('bg-blue-100', 'text-blue-700', 'border-blue-200', 'shadow-sm');
+                            t.classList.remove('bg-purple-100', 'text-purple-700', 'border-purple-200');
+                            t.classList.remove('bg-green-100', 'text-green-700', 'border-green-200');
+                            t.classList.add('text-gray-600', 'border-transparent');
+                        });
+                        
+                        // Add active styles based on category
+                        if (targetCategory === 'excipients') {
+                            this.classList.add('bg-blue-100', 'text-blue-700', 'border-blue-200', 'shadow-sm');
+                        } else if (targetCategory === 'vitamins') {
+                            this.classList.add('bg-purple-100', 'text-purple-700', 'border-purple-200', 'shadow-sm');
+                        }
+                        
+                        // Show/hide content
+                        categoryContents.forEach(content => {
+                            content.classList.add('hidden');
+                        });
+                        
+                        const targetContent = document.getElementById(targetCategory + '-content');
+                        if (targetContent) {
+                            targetContent.classList.remove('hidden');
+                        }
+                    });
+                });
+            }
+
+            // Desktop products category tabs
+            const categoryTabs = document.querySelectorAll('.category-tab');
+            const categoryContents = document.querySelectorAll('.category-content');
+
+            categoryTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const targetCategory = this.getAttribute('data-category');
+                    
+                    // Update tab styles
+                    categoryTabs.forEach(t => {
+                        t.classList.remove('bg-blue-100', 'text-blue-700', 'border-blue-200', 'bg-purple-100', 'text-purple-700', 'border-purple-200', 'bg-green-100', 'text-green-700', 'border-green-200');
+                        t.classList.add('text-gray-600', 'border-transparent');
+                    });
+                    
+                    // Add active styles based on category
+                    if (targetCategory === 'excipients') {
+                        this.classList.remove('text-gray-600', 'border-transparent');
+                        this.classList.add('bg-blue-100', 'text-blue-700', 'border-blue-200');
+                    } else if (targetCategory === 'vitamins') {
+                        this.classList.remove('text-gray-600', 'border-transparent');
+                        this.classList.add('bg-purple-100', 'text-purple-700', 'border-purple-200');
+                    } else if (targetCategory === 'food-nutra') {
+                        this.classList.remove('text-gray-600', 'border-transparent');
+                        this.classList.add('bg-green-100', 'text-green-700', 'border-green-200');
+                    }
+                    
+                    // Show/hide content
+                    categoryContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    
+                    const targetContent = document.getElementById(targetCategory + '-content');
+                    if (targetContent) {
+                        targetContent.classList.remove('hidden');
+                    }
+                });
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const href = this.getAttribute('href');
+                    const target = document.querySelector(href);
+                    
+                    // Don't scroll to footer-dynamic or similar footer elements
+                    if (target && !target.id.includes('footer')) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+
+                    // Close mobile menu after clicking a link
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+            
+            // Prevent automatic scrolling to footer on page load
+            if (window.location.hash && window.location.hash.includes('footer')) {
+                // Remove the hash from URL without scrolling
+                history.replaceState(null, null, window.location.pathname);
+            }
+
+            // Staggered fade-in-up animation for elements with .stagger-fade-in-up parent
+            const staggerContainers = document.querySelectorAll('.stagger-fade-in-up');
+            staggerContainers.forEach(container => {
+                const children = container.children;
+                Array.from(children).forEach((child, index) => {
+                    child.style.animationDelay = `${index * 0.1}s`;
+                });
+            });
+
+            // Slider functionality
+            const slider = document.querySelector('.slider-container');
+            const slides = document.querySelectorAll('.slide');
+            const dotsContainer = document.querySelector('#dotsContainer');
+            const prevBtn = document.querySelector('#prevBtn');
+            const nextBtn = document.querySelector('#nextBtn');
+            let currentIndex = 0;
+            let slideInterval;
+
+            if (slider && slides.length > 0) {
+                // Clear existing dots and create new ones based on number of slides
+                dotsContainer.innerHTML = '';
+                slides.forEach((_, index) => {
+                    const dot = document.createElement('span');
+                    dot.classList.add('dot');
+                    dot.setAttribute('data-slide', index);
+                    dot.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        goToSlide(index);
+                    });
+                    dotsContainer.appendChild(dot);
+                });
+
+                const dots = document.querySelectorAll('.dot');
+
+                // Update slider position and active dot
+                function updateSlider() {
+                    // Hide all slides
+                    slides.forEach(slide => {
+                        slide.classList.remove('active');
+                    });
+                    
+                    // Show current slide
+                    slides[currentIndex].classList.add('active');
+                    
+                    // Update dots
+                    dots.forEach((dot, index) => {
+                        if (index === currentIndex) {
+                            dot.classList.add('bg-opacity-100');
+                        } else {
+                            dot.classList.remove('bg-opacity-100');
+                        }
+                    });
+                }
+
+                // Go to specific slide
+                function goToSlide(index) {
+                    currentIndex = index;
+                    updateSlider();
+                    resetInterval();
+                }
+
+                // Go to next slide
+                function nextSlide() {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    updateSlider();
+                }
+
+                // Go to previous slide
+                function prevSlide() {
+                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    updateSlider();
+                }
+
+                // Reset auto-advance interval
+                function resetInterval() {
+                    clearInterval(slideInterval);
+                    slideInterval = setInterval(nextSlide, 5000);
+                }
+
+                // Add event listeners to navigation buttons
+                if (prevBtn && nextBtn) {
+                    prevBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        prevSlide();
+                        resetInterval();
+                    });
+
+                    nextBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        nextSlide();
+                        resetInterval();
+                    });
+                }
+
+                // Start auto-advance slider
+                slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+                updateSlider(); // Initial update
+            }
+
+            // Testimonials Carousel functionality
+            const testimonialsContainer = document.querySelector('#testimonials-carousel');
+            const testimonialCards = document.querySelectorAll('#testimonials-carousel .card');
+            let currentTestimonialIndex = 0;
+
+            if (testimonialsContainer && testimonialCards.length > 0) {
+                function updateTestimonialsCarousel() {
+                    const offset = -currentTestimonialIndex * testimonialCards[0].offsetWidth;
+                    testimonialsContainer.style.transform = `translateX(${offset}px)`;
+                }
+
+                function nextTestimonial() {
+                    currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonialCards.length;
+                    updateTestimonialsCarousel();
+                }
+
+                // Auto-advance testimonials
+                setInterval(nextTestimonial, 7000); // Change testimonial every 7 seconds
+
+                updateTestimonialsCarousel(); // Initial update
+            }
+            
+            // Handle form submission with product selections
+            const contactForm = document.querySelector('#contact form');
+            if (contactForm) {
+                // Check for URL parameters on page load to display status messages
+                window.addEventListener('load', function() {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const status = urlParams.get('status');
+                    
+                    if (status === 'success') {
+                        showMessage('Thank you for your message. We will get back to you soon!', 'success');
+                    } else if (status === 'error') {
+                        showMessage('Sorry, there was an error sending your message. Please try again later.', 'error');
+                    }
+                });
+                
+                contactForm.addEventListener('submit', function(e) {
+                    const productCheckboxes = document.querySelectorAll('input[name="products[]"]');
+                    const selectedProducts = Array.from(productCheckboxes)
+                        .filter(checkbox => checkbox.checked)
+                        .map(checkbox => checkbox.value);
+                    
+                    // Validate that at least one product is selected
+                    if (selectedProducts.length === 0) {
+                        e.preventDefault();
+                        showMessage('Please select at least one product of interest', 'error');
+                        return false;
+                    }
+                    
+                    // Form will submit normally if validation passes
+                });
+                
+                // Function to show status messages
+                function showMessage(message, type) {
+                    // Remove any existing message
+                    const existingMessage = document.querySelector('.form-message');
+                    if (existingMessage) {
+                        existingMessage.remove();
+                    }
+                    
+                    // Create message element
+                    const messageEl = document.createElement('div');
+                    messageEl.className = `form-message ${type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'} p-3 rounded-lg mb-4 w-full text-center`;
+                    messageEl.textContent = message;
+                    
+                    // Insert before the form
+                    contactForm.parentNode.insertBefore(messageEl, contactForm);
+                    
+                    // Scroll to message
+                    messageEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Auto-remove after 5 seconds if it's a success message
+                    if (type === 'success') {
+                        setTimeout(() => {
+                            messageEl.remove();
+                        }, 5000);
+                    }
+                }
+            }
+        });
+    </script>
+    <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
+    
+</body>
+</html>

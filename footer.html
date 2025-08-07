@@ -1,0 +1,830 @@
+<style>
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  a:hover,
+  button:hover {
+    opacity: 0.85;
+  }
+  /* FOOTER COLORS AND TYPOGRAPHY */
+  footer {
+    background-color: #175889;
+    color: #bdc7d1;
+  }
+  footer a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  .footer-container {
+    display: flex !important;
+    gap: 34px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0  auto;
+    padding: 93px 24px 120px;
+    position: relative;
+    z-index: 10;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  /* SINGLE COLUMN IN FOOTER */
+  .footer-col {
+    flex: 1 1 200px;
+    min-width: 200px;
+    max-width: 240px;    /* Adjust as needed for your design */
+    display: flex !important;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start; /* Aligns content to the left */
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  .footer-col h3 {
+    margin: 0 0 12px;
+    font-weight: 500;
+    color: #9ab5cc;
+    font-size: 1.1rem;
+  }
+  .footer-col p,
+  .footer-col li {
+    font-size: 0.9rem;
+    line-height: 1.4
+  }
+  /* Contact info & links */
+  .contact-text {
+    max-width: 280px;
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-color: #ffffff;
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  .contact-item svg {
+    fill: #ffffff;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+  /* Links list */
+  .footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex !important;
+    flex-direction: column;
+    gap: 2px; /* Reduced vertical space between items */
+    padding-left: 0; /* No left padding */
+    margin-left: 0;  /* No left margin */
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  .footer-list li {
+  padding: 2px 0;   /* Remove left padding */
+  margin: 0;
+  transition: background 0.25s, color 0.25s;
+  border-radius: 8px;
+  background: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  padding-left: 0; /* No left padding for list items */
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+}
+  /* The tabbed box - white with subtle shadow */
+  .tabbed-box {
+    background: #fff;
+    border-radius: 8px;
+    width: 255px;
+    height: 150px;
+    max-width: 360px;
+    color: #555d66;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 0.1);
+  }
+  /* Tab nav */
+  .tab-nav {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+  }
+  .tab-nav button {
+    flex: 1;
+    padding: 10px 5px;
+    background: none;
+    border: none;
+    font-weight: 500;
+    font-size: 0.85rem; /* base size */
+    color: #7a7f85;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-color 0.3s, font-size 0.3s, font-weight 0.3s;
+  }
+  .tab-nav button.active {
+    color: #175889;
+    border-color: #175889;
+    font-weight: 500;
+    font-size: 15px; /* larger when active */
+  }
+  /* Tab content style */
+  .tab-content {
+    padding: 18px 20px 18px 20px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #666d76;
+  }
+  .tab-content svg {
+    vertical-align: middle;
+    fill: #999;
+    margin-right: 8px;
+  }
+  /* Highlighted Products list */
+  .highlighted-products li {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  /* Brochure box */
+  .brochure-box {
+    background: #fff;
+    border-radius: 4px;
+    padding: 20px 22px;
+    max-width: 260px;
+    min-width: 200px;
+    color: #999ea9;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+    align-items: flex-start;
+  }
+  .brochure-box strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #abb9d9;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .brochure-desc {
+    font-size: 0.85rem;
+    line-height: 1.45;
+  }
+  .download-btn {
+    background: #bf1f1f;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    color: white;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 14px 24px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    min-width: 130px;
+    justify-content: center;
+    box-shadow: 0 3px 6px rgb(191 31 31 / 0.7);
+    transition: background-color 0.3s ease;
+  }
+  .download-btn:hover {
+    background-color: #9a1616;
+  }
+  .download-btn svg {
+    fill: white;
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+  }
+  .download-btn:focus-visible {
+    outline: 3px solid #ffb3b3;
+    outline-offset: 2px;
+  }
+  .download-btn:hover svg {
+    transform: translateX(4px);
+  }
+  /* Bottom smaller footer bar */
+  .footer-bottom-bg {
+    
+    background: #fff;
+    border-top: 1px solid #ccc;
+    margin-left: calc(50% - 50vw); /* ensures true full width even inside a centered container */
+    position: relative;
+    z-index: 1;
+    overflow-x: auto; /* Enables horizontal scroll if content overflows */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #ccc #fff; /* For Firefox */
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .footer-bottom-bg::-webkit-scrollbar {
+    height: 8px;
+  }
+  .footer-bottom-bg::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  .footer-bottom-bg::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+.footer-secondary {
+  position: relative;
+  background-color: #fff;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.footer-bottom-top {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 8px;
+}
+
+.footer-bottom-top .social-links {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-bottom-top nav {
+  display: flex;
+  gap: 24px;
+  font-size: 15px;
+  color: #175889;
+}
+
+.footer-bottom-top nav a {
+  color: #175889;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.footer-bottom-top nav a:hover {
+  color: #bf1f1f;
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 15px;
+  color: #858d99;
+  margin-left: 195px;
+  text-align: left;
+  margin-top: -12px;
+}
+
+.copyright a {
+  color: #bf1f1f;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.copyright a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .footer-bottom-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .footer-secondary {
+    text-align: center;
+  }
+  .copyright {
+    text-align: center;
+  }
+}
+  .footer-bottom {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  background: transparent;
+  color: #175889;
+  border: none;
+  gap: 24px;
+}
+.footer-bottom .social-links {
+  display: flex;
+  gap: 16px;
+  order: 1;
+}
+.footer-bottom nav {
+  display: flex;
+  gap: 24px;
+  font-size: 0.85rem;
+  color: #175889;
+  order: 2;
+}
+.footer-bottom .copyright {
+  font-size: 0.8rem;
+  color: #858d99;
+  margin: 0;
+  order: 3;
+  /* Remove flex-basis and text-align */
+}
+@media (max-width: 900px) {
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+  }
+  .footer-bottom nav {
+    justify-content: center;
+  }
+}
+  .footer-bottom .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #f1f6fb 60%, #e3eaf3 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(23, 88, 137, 0.10);
+    transition: background 0.25s, box-shadow 0.25s, transform 0.18s;
+    color: #175889;
+    font-size: 20px;
+    border: none;
+    outline: none;
+  }
+  .footer-bottom .social-links a svg {
+    width: 22px;
+    height: 22px;
+    fill: #175889;
+    transition: fill 0.25s;
+  }
+  .footer-bottom .social-links a:hover,
+  .footer-bottom .social-links a:focus-visible {
+    background: linear-gradient(135deg, #bf1f1f 70%, #e94e77 100%);
+    box-shadow: 0 4px 16px rgba(191, 31, 31, 0.18);
+    color: #fff;
+    transform: translateY(-2px) scale(1.08);
+  }
+  .footer-bottom .social-links a:hover svg,
+  .footer-bottom .social-links a:focus-visible svg {
+    fill: #fff;
+  }
+  /* Scroll to top circular button */
+  #scrollTopBtn {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    outline: none;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 9999;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #scrollTopBtn i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    background: #c41a1b; /* default red */
+    box-shadow:
+      0 0 0 4px #dfdfea inset,   /* inner ring */
+      0 4px 16px 0 rgba(23, 88, 137, 0.18); /* outer shadow for depth */
+    transition: background 0.25s, box-shadow 0.25s;
+}
+#scrollTopBtn:hover i,
+#scrollTopBtn:focus-visible i {
+    background: #175889; /* blue on hover */
+    color: #fff;
+    box-shadow:
+      0 0 0 4px #dfdfea inset,
+      0 8px 24px 0 rgba(23, 88, 137, 0.22); /* stronger shadow on hover */
+}
+  /* Modern hover effect and subtle animation for footer lists without changing alignment or format */
+.footer-list a,
+.highlighted-products a {
+  transition: color 0.25s;
+  border-radius: 8px;
+  padding: 2px 0;
+  display: inline-block;
+  color: inherit;
+  background: none;
+}
+
+.footer-list a:hover,
+.highlighted-products a:hover {
+  color: #bf1f1f;
+  background: none;
+  text-decoration: none;
+}
+
+/* Legal links and social icons */
+.footer-bottom nav a {
+  transition: color 0.25s, background 0.25s, box-shadow 0.25s, transform 0.25s;
+  border-radius: 6px;
+  padding: 2px 8px;
+  display: inline-block;
+}
+.footer-bottom nav a:hover {
+  color: #bf1f1f;
+  background: #f1f6fb;
+  box-shadow: 0 2px 8px rgba(191, 31, 31, 0.12);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.footer-bottom .social-links a {
+  transition: background 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+.footer-bottom .social-links a:hover,
+.footer-bottom .social-links a:focus-visible {
+  background: linear-gradient(135deg, #bf1f1f 70%, #e94e77 100%);
+  box-shadow: 0 4px 16px rgba(191, 31, 31, 0.18);
+  color: #fff;
+  transform: translateY(-2px) scale(1.08);
+}
+.footer-bottom .social-links a:hover svg,
+.footer-bottom .social-links a:focus-visible svg {
+  fill: #fff;
+}
+  /* RESPONSIVE */
+  @media (max-width: 1040px) {
+    .footer-container {
+      justify-content: center;
+      gap: 36px;
+    }
+    .footer-col, .tabbed-box, .brochure-box {
+      min-width: 260px;
+      max-width: 320px;
+    }
+  }
+  @media (max-width: 720px) {
+    .footer-container {
+      flex-direction: column;
+      padding: 36px 16px 24px;
+      gap: 36px;
+    }
+    .footer-col, .tabbed-box, .brochure-box {
+      max-width: 100%;
+      min-width: auto;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+      gap: 12px;
+      padding: 14px 16px;
+    }
+    .footer-bottom nav {
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-bottom .social-links {
+      order: 1;
+      gap: 12px;
+    }
+    .footer-bottom .copyright {
+      order: 2;
+    }
+  }
+  section.footer-col.new {
+    margin-right: 35px;
+}   
+
+.footer-bottom-bg::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  right: 50px;
+  height: 5px;
+  background-color: #c41a1b;
+  z-index: 2;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  color: #175889;
+  font-size: 22px;
+  box-shadow: 0 2px 8px rgba(23, 88, 137, 0.10);
+  border: 3px solid #e3eaf3; /* Light border */
+  transition: 
+    background 0.25s, 
+    color 0.25s, 
+    box-shadow 0.25s, 
+    transform 0.18s, 
+    border-color 0.25s,
+    text-decoration 0.2s;
+  outline: none;
+  text-decoration: none;
+}
+.social-link:hover,
+.social-link:focus-visible {
+  background: #fff;
+  color: #fff;
+  border-color: #bf1f1f; /* Red border on hover */
+  transform: scale(1.13);
+  box-shadow: 0 4px 24px 0 rgba(191, 31, 31, 0.25), 0 0 12px 2px #e94e77;
+  text-decoration: none;
+}
+.social-link i {
+  color: #175889;
+  transition: color 0.25s;
+}
+.social-link:hover i,
+.social-link:focus-visible i {
+  color: #bf1f1f; /* Icon color on hover */
+}
+#brochureDropdown {
+  overflow: visible; /* allow box-shadow to show */
+  padding: 6px 0 18px 0; /* more space at the bottom */
+  border-radius: 10px;
+  position: relative;
+  z-index: 10;
+}
+#brochureDropdown a {
+  display: block;
+  padding: 14px 22px 14px 18px;
+  font-weight: 600;
+  font-size: 1.08rem;
+  border-radius: 0.5rem;
+  margin: 4px 0;
+  color: #205781;
+  background: #fff;
+  border: 2px solid transparent;
+  box-shadow: 0 1px 4px rgba(44,62,80,0.04);
+  transition: 
+    background 0.2s, 
+    color 0.2s, 
+    border-color 0.2s, 
+    box-shadow 0.2s;
+}
+#brochureDropdown a:last-child {
+  margin-bottom: 2px;
+}
+#brochureDropdown a[href*="excipients"]:hover {
+  background: #fee2e2; /* light red */
+  color: #c41a1b;
+  border-color: #c41a1b;
+  box-shadow: 0 2px 8px rgba(196, 26, 27, 0.10);
+}
+#brochureDropdown a[href*="apis"]:hover {
+  background: #dbeafe; /* light blue */
+  color: #2563eb;
+  border-color: #2563eb;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.13);
+}
+#brochureDropdown a:hover {
+  text-decoration: none;
+}
+.tab-content:focus {
+  outline: none;
+  box-shadow: none;
+}
+footer[role="contentinfo"] {
+
+  background: #175889;
+}
+.footer-container {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background: url('https://prachinpharmachem.com/assets/images/backgrounds/pattern.png') no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+.footer-bottom-bg {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+@media screen and (max-width: 767px) {
+  .tabbed-box {
+    min-width: auto;
+    width: 360px;
+  }
+  p.contact-text {
+    min-width: 350px;
+  }
+  .download-btn {
+    width: 314px !important;
+  }
+  .footer-bottom-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  /* Ensure Quick Links is visible on mobile */
+  .footer-col[aria-labelledby="quicklinks-label"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 30px;
+  }
+  .copyright {
+    padding-top: 15px;
+    margin-left: 0px;
+  }
+  ul#brochureDropdown {
+    min-width: 310px !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section.brochure-box {
+    min-width: 730px;
+   }
+   button#brochureDropdownBtn {
+    min-width: 685px;
+}
+ul#brochureDropdown {
+    min-width: 680px !important;
+}
+.footer-bottom-top {
+    display: flex
+;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+}
+
+</style>
+
+<footer role="contentinfo" aria-label="Website footer section">
+  <div class="footer-container">
+    <!-- Quick Contacts -->
+    <section class="footer-col new " aria-labelledby="quickcontacts-label">
+      <h3 id="quickcontacts-label">Quick Contacts</h3>
+      <p class="contact-text" style="font-size: 16px; font-weight: 600; font-color: #ffffff;">
+        If you have any questions or need help, feel free to contact with our team.
+      </p>
+      <div class="contact-info">
+        <div class="contact-item" aria-label="Email contact info">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20 6H4c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM4 8l8 5 8-5v2l-8 5-8-5V8z"/></svg>
+          <a href="mailto:info@prachinchemicalinc.com" aria-label="Email to info at prachin pharmachem">info@prachinchemicalinc.com</a>
+        </div>
+        <div class="contact-item" aria-label="Phone contact info">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M6.62 10.79a15.093 15.093 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.56a1 1 0 01-1 1A17.9 17.9 0 013 6a1 1 0 011-1h3.56a1 1 0 011 1c0 1.35.26 2.67.76 3.88a1 1 0 01-.21 1.11l-2.2 2.2z"/></svg>
+          <a href="tel:+19082571897" aria-label="Call phone number 079 805 806 807">+1 (908) 257-1897</a>
+        </div>
+      </div>
+      <!-- Tabbed addresses -->
+      <div class="tabbed-box" role="tablist" aria-label="Address information">
+        <div class="tab-nav" role="tablist">
+          <button id="tab-office" class="active" role="tab" aria-controls="panel-office" aria-selected="true" tabindex="0">Corporate Office</button>
+          <button id="tab-plant" role="tab" aria-controls="panel-plant" aria-selected="false" tabindex="-1">Plant</button>
+        </div>
+        <div id="panel-office" role="tabpanel" aria-labelledby="tab-office" tabindex="0" class="tab-content">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" style="width:16px; height:16px; margin-right:6px; vertical-align:middle; fill:#999;">
+            <path d="M12 2C8.1 2 5 5.1 5 9c0 5.3 7 12 7 12s7-6.7 7-12c0-3.9-3.1-7-7-7zM7 9c0-2.8 2.2-5 5-5s5 2.2 5 5c0 3-3.3 7.6-5 9.9C10.3 16.6 7 12 7 9z"></path> 
+            <circle cx="12" cy="9" r="2.5"></circle>
+          </svg>
+          25 Cotters Ln Ste A, East Brunswick, NJ 08816.
+        </div>
+        <div id="panel-plant" role="tabpanel" aria-labelledby="tab-plant" tabindex="0" class="tab-content" hidden>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" style="width:16px; height:16px; margin-right:6px; vertical-align:middle; fill:#999;">
+            <path d="M12 2C8.1 2 5 5.1 5 9c0 5.3 7 12 7 12s7-6.7 7-12c0-3.9-3.1-7-7-7zM7 9c0-2.8 2.2-5 5-5s5 2.2 5 5c0 3-3.3 7.6-5 9.9C10.3 16.6 7 12 7 9z"></path> 
+            <circle cx="12" cy="9" r="2.5"></circle>
+          </svg>
+          1307/6-7-8, Phase IV, G.I.D.C Estate Naroda, Ahmedabad-382330 Gujarat, India
+        </div>
+      </div>
+        </section>
+
+    <!-- Quick Links -->
+    <nav class="footer-col" aria-labelledby="quicklinks-label" role="navigation" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
+      <h3 id="quicklinks-label" style="color: #ffffff; font-size: 18px; margin-bottom: 15px;">Quick Links</h3>
+      <ul class="footer-list" role="list" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
+        <li><a href="#" tabindex="0">Home</a></li>
+        <li><a href="#" tabindex="0">About Us</a></li>
+        <li><a href="#" tabindex="0">Products</a></li>
+        <li><a href="#" tabindex="0">Certifications</a></li>
+        <li><a href="#" tabindex="0">Contact Us</a></li>
+        <li><a href="#" tabindex="0">Privacy Policy</a></li>
+        <li><a href="#" tabindex="0">Terms & Conditions</a></li>
+      </ul>
+    </nav>
+
+    <!-- Industries We Serve -->
+    <section class="footer-col" aria-labelledby="industries-label" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
+      <h3 id="industries-label">Industries We Serve</h3>
+      <ul class="footer-list" role="list" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
+        <li><a>Pharmaceutical</a></li>
+        <li><a>Nutraceutical</a></li>
+        <li><a>Food</a></li>
+        </ul>
+    </section>
+
+    <!-- Highlighted Products -->
+    <section class="footer-col" aria-labelledby="products-label" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
+      <h3 id="products-label">Highlighted Products</h3>
+      <ul class="footer-list highlighted-products" role="list" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
+        <li><a href="#">Croscarmellose Sodium</a></li>
+        <li><a href="#">Carboxymethyl Cellulose Calcium</a></li>
+        <li><a href="#">Sodium Starch Glycolate</a></li>
+        <li><a href="#">Microcrystalline Cellulose</a></li>
+        <li><a href="#">Magnesium Stearate</a></li>
+        <li><a href="#">Sodium Stearyl Fumarate</a></li>
+      </ul>
+    </section>
+
+    <!-- Download Brochure -->
+    <section class="brochure-box" aria-labelledby="brochure-label">
+      <h3 id="brochure-label" style="font-size:1.05rem; margin-bottom:8px; color:#abb9d9; font-weight:600;">Download Our Brochure</h3>
+      <p class="brochure-desc" style="font-size:0.92rem; margin-bottom:12px; color:#999ea9;">
+        Get a complete overview of our products and services. Click below to download our company brochure.
+      </p>
+      <div class="download-btn-container"   style="position:relative; width:100%;">
+        <button class="download-btn" id="brochureDropdownBtn" aria-haspopup="true" aria-expanded="false" style="width:220px; font-size:1.05rem; padding:16px 0; background:#bf1f1f; border-radius:4px; color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; gap:8px; box-shadow:0 3px 6px rgb(191 31 31 / 0.7); border:none;">
+          Download
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" style="width:20px; height:20px; margin-left:8px;"><path d="M7 10l5 5 5-5z"/></svg>
+        </button>
+        <ul id="brochureDropdown" style="display:none; position:absolute; left:0; top:100%; background:#fff; color:#222; box-shadow:0 2px 8px rgba(0,0,0,0.12); border-radius:6px; margin:8px 0 0; padding:0; list-style:none; min-width:220px; z-index:10; border:1px solid #e0e0e0;">
+          <li>
+            <a href="apis-brochure.pdf" download >APIs Brochure</a>
+          </li>
+          <li>
+            <a href="excipients-brochure.pdf" download style="display:block; padding:16px 18px; font-size:1.08rem; color:#222; font-weight:500;">Excipients Brochure</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <!-- Bottom footer -->
+  <div class="footer-bottom-bg">
+  <div class="footer-secondary">
+    <div class="footer-bottom-top">
+      <!-- Social Media Icons -->
+      <div class="footer-social" aria-label="Social media links">
+        <a href="mailto:info@prachinpharmachem.com" aria-label="Email" class="social-link" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="https://instagram.com" aria-label="Instagram" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com" aria-label="LinkedIn" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <!-- Social Media Text -->
+      <nav aria-label="Footer social text">
+        <a href="#">Follow Us</a>
+        <a href="#">Connect With Us</a>
+      </nav>
+    </div>
+    <!-- Copyright -->
+    <div class="copyright">
+      &copy; 2025 Prachin Group, All Rights Reserved. | Pharmaceutical Excellence Since 1989 | With 
+      <span aria-label="heart symbol" role="img" style="color:#bf1f1f;">&#10084;</span> by 
+      <a href="#" style="color:#bf1f1f;">Voscart</a>
+    </div>
+  </div>
+  </div>
+
+  
+</footer>
+
+
+

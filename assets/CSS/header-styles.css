@@ -1,0 +1,507 @@
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Header styles matching style.css specifications */
+.header {
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar {
+    padding: 0;
+    height: 100px;
+    max-height: 100px;
+    background-color: #ffffff;
+}
+
+.navbar > .container,
+.navbar > .container-fluid {
+    position: relative;
+    height: 100px;
+}
+
+.navbar .navbar-brand {
+    padding: 0;
+    margin: 0;
+    line-height: 100px;
+}
+
+a.navbar-brand {
+    max-width: 150px;
+}
+
+.navbar .navbar-brand img {
+    height: 40px;
+    width: auto;
+    max-width: 100%;
+}
+
+.navbar .nav-item {
+    position: relative;
+    margin-right: 25px;
+}
+
+.navbar .nav-item .nav-item-link {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: capitalize;
+    display: block;
+    position: relative;
+    color: #205781;
+    line-height: 80px;
+    letter-spacing: 0.4px;
+    padding-right: 15px;
+    text-decoration: none;
+}
+
+.navbar .nav-item .nav-item-link.active, 
+.navbar .nav-item .nav-item-link:hover {
+    color: #c41a1b;
+}
+
+.navbar .nav-item .nav-item-link.active:before, 
+.navbar .nav-item .nav-item-link:hover:before {
+    width: 100%;
+}
+
+.navbar .nav-item:last-child {
+    margin-right: 0;
+}
+
+.navbar-actions > li {
+    margin-left: 20px;
+}
+
+.navbar-actions > li:last-child {
+    margin-right: 0;
+}
+
+.action-btn {
+    color: #c41a1b;
+}
+
+/* CTA Button styling */
+.cta-button {
+    background: linear-gradient(135deg, #205781 0%, #1a4a6b 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(32, 87, 129, 0.3);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cta-button:hover {
+    background: linear-gradient(135deg, #c41a1b 0%, #a01515 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(196, 26, 27, 0.4);
+    text-decoration: none;
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+/* Custom color override for text-blue-800 */
+.text-blue-800 {
+    color: #205781 !important;
+}
+
+/* Custom color overrides for blue classes */
+.text-blue-800 {
+    color: #205781 !important;
+}
+
+.hover\:text-blue-800:hover {
+    color: #205781 !important;
+}
+    
+.border-blue-200 {
+    border-color: #bfdbfe !important;
+}
+
+.hover\:bg-blue-50:hover {
+    background-color: #eff6ff !important;
+}
+
+.text-blue-400 {
+    color: #3b82f6 !important;
+}
+
+/* Custom color overrides for red classes */
+.text-red-700 {
+    color: #c41a1b !important;
+}
+
+.hover\:text-red-700:hover {
+    color: #c41a1b !important;
+}
+
+.border-red-200 {
+    border-color: #fecaca !important;
+}
+
+.hover\:bg-red-50:hover {
+    background-color: #fef2f2 !important;
+}
+
+.text-red-400 {
+    color: #f87171 !important;
+}
+
+/* Category tab button hover effects */
+.category-tab {
+    transition: all 0.3s ease !important;
+}
+
+.category-tab:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(32, 87, 129, 0.15) !important;
+}
+
+.category-tab:active {
+    transform: translateY(0) !important;
+}
+
+/* Active state for category tabs */
+.category-tab.bg-blue-50 {
+    background-color: #eff6ff !important;
+    color: #205781 !important;
+    border-color: #bfdbfe !important;
+    box-shadow: 0 2px 8px rgba(32, 87, 129, 0.1) !important;
+}
+
+.category-tab.bg-red-50 {
+    background-color: #fef2f2 !important;
+    color: #c41a1b !important;
+    border-color: #fecaca !important;
+    box-shadow: 0 2px 8px rgba(196, 26, 27, 0.1) !important;
+}
+
+/* Non-active state for category tabs */
+.category-tab:not(.bg-blue-50):not(.bg-red-50) {
+    background-color: transparent !important;
+    color: #205781 !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Product links hover color - change from blue to red */
+#products-overlay a[href*="#"]:hover {
+    color: #c41a1b !important;
+}
+
+#products-overlay .hover\\:text-blue-800:hover {
+    color: #c41a1b !important;
+}
+
+#products-overlay .hover\\:bg-blue-50:hover {
+    background-color: #fef2f2 !important;
+}
+
+.category-tab:not(.bg-blue-50):not(.bg-red-50):hover {
+    background-color: #eff6ff !important;
+    color: #205781 !important;
+    border-color: #bfdbfe !important;
+    box-shadow: 0 2px 8px rgba(32, 87, 129, 0.1) !important;
+}
+
+/* Sticky header styles */
+.is-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.is-sticky .navbar-brand {
+    line-height: 80px;
+}
+
+.is-sticky .logo-light {
+    display: block;
+}
+
+.is-sticky .logo-dark {
+    display: none;
+}
+
+/* Header layout improvements */
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 45px;
+    margin-right: 70px;
+}
+
+.nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin: 0 2rem;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-container {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Custom container width for large desktop */
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1820px;
+    }
+}
+
+/* Mobile responsive styles */
+@media (max-width: 420px) {
+    .header .navbar-brand img {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 1236px) {
+    .navbar .navbar-toggler {
+        display: block;
+        border: none;
+        background: transparent;
+        padding: 0.5rem;
+    }
+    
+    .navbar .navbar-nav {
+        display: none;
+    }
+    
+    .navbar .navbar-nav.show {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+    }
+    
+    .navbar .nav-item {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    .navbar .nav-item .nav-item-link {
+        line-height: 1.5;
+        padding: 0.75rem 1rem;
+    }
+}
+.py-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.h-8 {
+    height: 2.25rem;
+}
+.text-gray-700 {
+    color: #6b7280;
+}
+.hover\:bg-gray-100:hover {
+    background-color: #f3f4f6;
+}
+/* Product menu improvements */
+/* Desktop dropdown - hide on mobile/tablet, show on desktop */
+#products-overlay {
+    display: none !important; /* Hide by default */
+}
+
+/* Show desktop dropdown only on large screens */
+@media (min-width: 1024px) {
+    #products-overlay {
+        display: block !important; /* Show on desktop */
+    }
+}
+
+/* Hide desktop navigation on mobile/tablet */
+.nav-center {
+    display: none !important;
+}
+
+/* Show desktop navigation only on large screens */
+@media (min-width: 1024px) {
+    .nav-center {
+        display: flex !important;
+    }
+}
+
+/* Hide desktop inquiry button on mobile/tablet */
+.cta-button {
+    display: none !important;
+}
+
+/* Show desktop inquiry button only on large screens */
+@media (min-width: 1024px) {
+    .cta-button {
+        display: inline-flex !important;
+    }
+}
+
+/* Make logo smaller on mobile and tablet */
+.logo-container img {
+    height: 1.5rem !important; /* 24px - smaller for mobile/tablet */
+    width: auto !important;
+}
+
+/* Larger logo on desktop */
+@media (min-width: 1024px) {
+    .logo-container img {
+        height: 2rem !important; /* 32px - original size for desktop */
+    }
+}
+
+/* Header nav styles for mobile and tablet */
+@media (max-width: 1023px) {
+    .header-nav {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        margin-left: 0px !important;
+        margin-right: 70px !important;
+    }
+}
+
+/* Mobile inquiry button styles */
+#mobile-menu .cta-button {
+    background: linear-gradient(135deg, #205781 0%, #1a4a6b 100%) !important;
+    color: white !important;
+    padding: 12px 24px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 12px rgba(32, 87, 129, 0.3) !important;
+    border: none !important;
+    display: block !important;
+    text-align: center !important;
+    margin: 0 !important;
+}
+
+#mobile-menu .cta-button:hover {
+    background: linear-gradient(135deg, #c41a1b 0%, #a01515 100%) !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(196, 26, 27, 0.4) !important;
+    text-decoration: none !important;
+}
+#products-overlay .w-64 {
+    width: 10rem !important; /* Increased width */
+}
+#products-overlay .px-4 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+}
+#products-overlay .py-3 {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+}
+#products-overlay .p-4 {
+    padding: 0.75rem !important;
+}
+#products-overlay .mb-3 {
+    margin-bottom: 0.75rem !important;
+}
+#products-overlay .text-lg {
+    font-size: 1rem !important; /* Increased product name size */
+    font-weight: 600 !important;
+}
+#products-overlay .text-sm {
+    font-size: 0.75rem !important; /* Increased text size */
+}
+#products-overlay .text-xs {
+    font-size: 0.625rem !important;
+}
+#products-overlay .py-2 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+#products-overlay .rounded-lg {
+    border-radius: 0.5rem !important;
+}
+#products-overlay .space-y-3 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.5rem !important;
+}
+#products-overlay .space-y-2 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.375rem !important;
+}
+/* Remove dots before product names */
+#products-overlay a[href*="#"]::before {
+    content: "" !important;
+}
+#products-overlay a[href*="#"] {
+    padding-left:10px !important;
+}
+/* Mobile menu */
+#products-submenu, #products-toggle, #mobile-menu .px-6 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+#products-submenu, #products-toggle, #mobile-menu .py-4 {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+}
+#products-submenu .py-3, #products-submenu .py-2, #products-submenu .py-1 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+#products-submenu .text-sm {
+    font-size: 0.75rem !important; /* Increased text size */
+}
+#products-submenu .text-xs {
+    font-size: 0.625rem !important;
+}
+#products-submenu .ml-4 {
+    margin-left: 0.75rem !important;
+}
+#products-submenu .mb-2 {
+    margin-bottom: 0.5rem !important;
+}
+#products-submenu .mt-6, #products-submenu .pt-4 {
+    margin-top: 0.75rem !important;
+    padding-top: 0.75rem !important;
+}
+/* Remove dots before product names in mobile */
+#products-submenu a[href*="#"]::before {
+    content: "" !important;
+}
+#products-submenu a[href*="#"] {
+    padding-left: 0 !important;
+}

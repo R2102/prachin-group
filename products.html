@@ -1,0 +1,1116 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parchin Group - Products</title>
+    <!-- <link rel="icon" type="image/svg+xml" href="assets/images/company/favicon-png.svg"> -->
+    <link rel="icon" type="image/x-icon" href="assets/images/company/Prachin Group.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background-color: #eef2f7;
+        }
+        .section-title {
+            font-size: 2rem; /* Default for mobile */
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+        }
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 2.5rem; /* md:text-4xl */
+                margin-bottom: 1rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .section-title {
+                font-size: 3rem; /* lg:text-5xl */
+                margin-bottom: 1.25rem;
+            
+            color: #1a2b4d;
+        }}
+        .section-subtitle {
+            font-size: 1rem; /* Default for mobile */
+            color: #52617A;
+            margin-bottom: 2rem;
+        }
+        @media (min-width: 768px) {
+            .section-subtitle {
+                font-size: 1.125rem; /* md:text-lg */
+                margin-bottom: 3rem;
+            
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }}
+        .card {
+            background-color: white;
+            border-radius: 0.25rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .cta-button {
+            background-color: #205781;
+            color: white;
+            padding: 0.875rem 2rem;
+            border-radius: 0.25rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .cta-button:hover {
+            background-color: #1c358a;
+            transform: scale(1.03);
+        }
+        .nav-link {
+            color: #334155;
+            font-weight: 600;
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.125rem;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #205781;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 70%;
+        }
+                .nav-link:hover {
+            color: #205781; 
+            background-color: transparent; 
+        }
+        
+        /* Header layout improvements */
+        .header-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-left: 70px;
+            margin-right: 70px;
+        }
+        
+        .nav-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            margin: 0 2rem;
+        }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        /* Logo improvements */
+        .logo-container {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Navigation spacing */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Custom container width for large desktop */
+        @media (min-width: 1536px) {
+            .container {
+                max-width: 2050px;
+            }
+        }
+        .footer-bg {
+            background-color: #0f172a;
+            color: #cbd5e1;
+        }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUpAnimation 0.8s ease-out forwards;
+        }
+        @keyframes fadeInUpAnimation {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .stagger-fade-in-up > * {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUpAnimation 0.8s ease-out forwards;
+        }
+        .company-logo-text {
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        .icon-circle {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .extra-product-card {
+  position: relative;
+  background: linear-gradient(135deg, #e3eaf6 0%, #c7e0f7 60%, #b3d8f7 100%);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(34,91,125,0.10), 0 0 32px 0 #20578122;
+  backdrop-filter: blur(10px);
+  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 440px;
+  overflow: visible;
+  z-index: 1;
+  transition: box-shadow 0.3s, transform 0.3s;
+  margin-bottom: 1.5rem;
+}
+.extra-product-card:hover, .extra-product-card:focus {
+  box-shadow: 0 16px 48px rgba(34,91,125,0.18), 0 0 32px #20578133;
+  transform: translateY(-8px) scale(1.03);
+  z-index: 2;
+}
+.extra-product-badge {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  z-index: 10;
+  background: linear-gradient(90deg, #fffbe7 0%, #e3eaf6 100%);
+  color: #205781;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.4rem 1.1rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px #20578111;
+  letter-spacing: 0.01em;
+  opacity: 0.93;
+  border: 2px solid #e3eaf6;
+  pointer-events: none;
+  user-select: none;
+  animation: badgePulse 2s infinite alternate;
+}
+@keyframes badgePulse {
+  0% { box-shadow: 0 0 0 #20578111; }
+  100% { box-shadow: 0 0 16px #20578133; }
+}
+.extra-product-img-container {
+  position: relative;
+  top: -48px;
+  margin-bottom: -32px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.extra-product-img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  border-radius: 1.2rem;
+  background: #fff;
+  box-shadow: 0 8px 32px #20578122, 0 2px 8px #20578111;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.extra-product-card:hover .extra-product-img, .extra-product-card:focus .extra-product-img {
+  transform: scale(1.08) rotate(-4deg);
+  box-shadow: 0 16px 48px #20578133;
+}
+.extra-product-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #205781;
+  margin-bottom: 0.4rem;
+  margin-top: 0.7rem;
+  text-align: center;
+}
+.extra-product-desc {
+  color: #52617A;
+  font-size: 1.01rem;
+  text-align: center;
+  margin-bottom: 1.1rem;
+  min-height: 38px;
+  max-width: 90%;
+}
+.extra-product-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  margin-bottom: 1.1rem;
+}
+.extra-product-feature-chip {
+  background: #e3eaf6;
+  color: #205781;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  box-shadow: 0 1px 4px #20578111;
+  white-space: nowrap;
+}
+.extra-product-grades {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  margin-bottom: 1.1rem;
+}
+.extra-product-grade {
+  background: #205781;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  box-shadow: 0 1px 4px #20578122;
+  white-space: nowrap;
+}
+.extra-product-fact {
+  display: none;
+  color: #205781;
+  font-weight: 700;
+  font-size: 1.01rem;
+  margin-bottom: 1.1rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s, transform 0.4s;
+}
+.extra-product-card:hover .extra-product-fact, .extra-product-card:focus .extra-product-fact {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  animation: factBounce 0.7s;
+}
+@keyframes factBounce {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.15); }
+  60% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+.extra-product-btn {
+  display: inline-block;
+  font-weight: 700;
+  color: #205781;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.2s, background 0.2s;
+  z-index: 2;
+  font-size: 1.08rem;
+  text-decoration: none;
+  background: linear-gradient(90deg, #e3eaf6 0%, #fffbe7 100%);
+  border-radius: 999px;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  outline: none;
+  margin-top: auto;
+  box-shadow: 0 1px 4px #20578111;
+  overflow: hidden;
+}
+.extra-product-btn .extra-product-underline {
+  display: block;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, #205781, #c41a1b, #205781);
+  border-radius: 2px;
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}
+.extra-product-btn:hover .extra-product-underline, .extra-product-btn:focus .extra-product-underline {
+  width: 100%;
+}
+.extra-product-btn:active {
+  background: linear-gradient(90deg, #20578122 0%, #c41a1b22 100%);
+}
+@media (max-width: 991px) {
+  .extra-product-card { min-width: 90vw; max-width: 100vw; }
+}
+@media (max-width: 767px) {
+  .extra-product-card { margin: 0 auto 1.2rem auto; min-width: 90vw; max-width: 95vw; padding: 1.2rem 0.5rem 1.2rem 0.5rem; border-radius: 1.2rem; min-height: unset; box-sizing: border-box; }
+  .extra-product-title { font-size: 1.05rem; margin-bottom: 0.3rem; }
+  .extra-product-img { width: 56px; height: 56px; }
+  .extra-product-badge { font-size: 0.85rem; padding: 0.25rem 0.7rem; top: 0.6rem; left: 0.6rem; }
+  .extra-product-desc { font-size: 0.98rem; margin-bottom: 0.7rem; min-height: unset; }
+  .extra-product-fact { font-size: 0.98rem; margin-bottom: 0.7rem; }
+  .extra-product-btn { font-size: 0.98rem; padding-bottom: 1px; }
+}
+        .flip-product-card {
+          width: 370px;
+          height: 500px;
+          perspective: 1200px;
+          margin: 1.5rem auto;
+        }
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.25,0.8,0.25,1);
+  transform-style: preserve-3d;
+}
+.flip-product-card:hover .flip-card-inner,
+.flip-product-card:focus-within .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(34,91,125,0.10);
+  background: linear-gradient(135deg, #e3eaf6 0%, #c7e0f7 60%, #b3d8f7 100%);
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.flip-card-front {
+  z-index: 2;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+  z-index: 3;
+  padding: 1.2rem;
+}
+.flip-product-badge {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  background: #205781;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.3rem 1rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px #20578111;
+  letter-spacing: 0.01em;
+}
+.flip-product-img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 8px 32px #20578122;
+  margin-bottom: 1.2rem;
+}
+.flip-product-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #205781;
+  text-align: center;
+}
+.flip-product-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  margin-bottom: 1.1rem;
+}
+.flip-feature-chip {
+  background: #e3eaf6;
+  color: #205781;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  box-shadow: 0 1px 4px #20578111;
+  white-space: nowrap;
+}
+.flip-product-fact {
+  color: #205781;
+  font-weight: 700;
+  font-size: 1.01rem;
+  margin-bottom: 1.1rem;
+  text-align: center;
+}
+.flip-product-btn {
+  display: inline-block;
+  font-weight: 700;
+  color: #fff;
+  background: #205781;
+  border-radius: 999px;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.flip-product-btn:hover, .flip-product-btn:focus {
+  background: #c41a1b;
+}
+@media (max-width: 500px) {
+  .flip-product-card { width: 98vw; height: 320px; }
+  .flip-product-img { width: 60px; height: 60px; }
+}
+        /* Default styles (for large desktops) */
+.flip-product-card {
+  width: 19vw;
+  max-width: 370px;
+  height: 500px;
+}
+
+/* For larger desktops */
+@media (max-width: 1200px) {
+  .flip-product-card {
+    width: 24vw;
+    max-width: 320px;
+    height: 480px;
+  }
+}
+
+/* For small desktops and large tablets */
+@media (max-width: 992px) {
+  .flip-product-card {
+    width: 32vw;
+    max-width: 300px;
+    height: 420px;
+  }
+}
+
+/* For tablets and larger phones */
+@media (max-width: 768px) {
+  .flip-product-card {
+    width: 90vw;
+    max-width: 250px;
+    height: 380px;
+  }
+}
+
+/* For small phones */
+@media (max-width: 576px) {
+  .flip-product-card {
+    width: 98vw;
+    max-width: 98vw;
+    height: 320px;
+    min-width: 0;
+    margin: 0 auto 1.2rem auto;
+    border-radius: 1.2rem;
+    box-sizing: border-box;
+  }
+  .flip-card-inner {
+    min-width: 0;
+  }
+}
+
+.flip-card-front div[style*='background:rgba(32,87,129,0.85)'] {
+  font-size: 0.95rem !important;
+  padding: 0.4rem 0 !important;
+}
+
+/* Styles for tablets (and potentially smaller desktops, depending on your breakpoint) */
+@media (max-width: 768px) { /* Adjust this breakpoint as needed for tablets */
+  .flip-product-card {
+    width: 90vw;
+    max-width: 300px; /* Keep max-width for consistency if desired */
+    height: 380px;
+  }
+}
+        /* Hide on tablet by default */
+.show-tablet { display: none; }
+.show-mobile-desktop { display: inline-block; }
+
+/* Show only on tablet (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .show-tablet { display: inline-block; }
+  .show-mobile-desktop { display: none; }
+}
+        /* Comprehensive Responsive Design for Product Cards */
+        
+        /* Grid Layout Responsive */
+        .products-grid {
+            display: grid;
+            gap: 2rem;
+            justify-content: center;
+            align-items: start;
+        }
+        
+        /* Large Desktops (1200px+) */
+        .products-grid {
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .flip-product-card {
+            width: 100%;
+            max-width: 380px;
+            height: 520px;
+            margin: 0 auto;
+        }
+        
+        /* Large Desktops (992px - 1199px) */
+        @media (max-width: 1199px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 1.5rem;
+                padding: 0 1.5rem;
+            }
+            
+            .flip-product-card {
+                max-width: 350px;
+                height: 480px;
+            }
+        }
+        
+        /* Medium Desktops and Large Tablets (768px - 991px) */
+        @media (max-width: 991px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 1.25rem;
+                padding: 0 1rem;
+            }
+            
+            .flip-product-card {
+                max-width: 320px;
+                height: 440px;
+            }
+            
+            .flip-card-front h3 {
+                font-size: 1.1rem !important;
+                line-height: 1.3 !important;
+            }
+            
+            .flip-card-back h3 {
+                font-size: 1.2rem !important;
+            }
+            
+            .flip-feature-chip {
+                font-size: 0.75rem !important;
+                padding: 0.4rem 0.8rem !important;
+            }
+        }
+        
+        /* Tablets and Large Phones (576px - 767px) */
+        @media (max-width: 767px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                gap: 1rem;
+                padding: 0 0.75rem;
+            }
+            
+            .flip-product-card {
+                max-width: 300px;
+                height: 400px;
+            }
+            
+            .flip-card-front h3 {
+                font-size: 1rem !important;
+                line-height: 1.2 !important;
+                padding: 0.5rem !important;
+            }
+            
+            .flip-card-back h3 {
+                font-size: 1.1rem !important;
+                margin-bottom: 1rem !important;
+            }
+            
+            .flip-product-features {
+                margin-top: 1.5rem !important;
+                gap: 0.5rem !important;
+            }
+            
+            .flip-feature-chip {
+                font-size: 0.7rem !important;
+                padding: 0.3rem 0.6rem !important;
+            }
+            
+            .flip-product-btn {
+                margin-top: 1.5rem !important;
+                padding: 0.6rem 1.2rem !important;
+                font-size: 0.85rem !important;
+            }
+        }
+        
+        /* Small Phones (up to 575px) */
+        @media (max-width: 575px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                padding: 0 0.5rem;
+            }
+            
+            .flip-product-card {
+                width: 100%;
+                max-width: 100%;
+                height: 360px;
+                margin: 0 auto;
+            }
+            
+            .flip-card-front h3 {
+                font-size: 0.95rem !important;
+                line-height: 1.1 !important;
+                padding: 0.4rem !important;
+            }
+            
+            .flip-card-back h3 {
+                font-size: 1rem !important;
+                margin-bottom: 0.75rem !important;
+            }
+            
+            .flip-product-features {
+                margin-top: 1rem !important;
+                gap: 0.4rem !important;
+            }
+            
+            .flip-feature-chip {
+                font-size: 0.65rem !important;
+                padding: 0.25rem 0.5rem !important;
+            }
+            
+            .flip-product-btn {
+                margin-top: 1rem !important;
+                padding: 0.5rem 1rem !important;
+                font-size: 0.8rem !important;
+            }
+        }
+        
+        /* Extra Small Phones (up to 375px) */
+        @media (max-width: 375px) {
+            .products-grid {
+                padding: 0 0.25rem;
+            }
+            
+            .flip-product-card {
+                height: 340px;
+            }
+            
+            .flip-card-front h3 {
+                font-size: 0.9rem !important;
+                padding: 0.3rem !important;
+            }
+            
+            .flip-card-back h3 {
+                font-size: 0.95rem !important;
+            }
+            
+            .flip-feature-chip {
+                font-size: 0.6rem !important;
+                padding: 0.2rem 0.4rem !important;
+            }
+        }
+        
+        /* Ensure proper image scaling */
+        .flip-card-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+        
+        /* Maintain flip animation performance */
+        .flip-product-card {
+            perspective: 1000px;
+            transform-style: preserve-3d;
+        }
+        
+        .flip-card-front,
+        .flip-card-back {
+            backface-visibility: hidden;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-700 antialiased">
+  <!-- Load the dynamic header script -->
+  <script src="js/header.js"></script>
+  
+  <!-- Existing products page content goes here -->
+
+  <main class="">
+        <section class="py-12 md:py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="section-title fade-in-up">Our Products</h2>
+                    <p class="section-subtitle fade-in-up" style="animation-delay: 0.2s;">
+                        Explore our diverse range of high-quality products designed to meet your needs.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 stagger-fade-in-up">
+                    <!-- Croscarmellose Sodium -->
+                    <div class="flip-product-card">
+  <div class="flip-card-inner" style="width:100%; height:100%;">
+    <div class="flip-card-front" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden;">
+      <img src="assets/images/products/photography/croscarmellosesodium/image-1.jpg" alt="Croscarmellose Sodium" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:0.5rem; display:block;" />
+      <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(32,87,129,0.85); color:#fff; font-weight:800; font-size:1.15rem; padding:0.7rem 0; text-align:center;border-radius:0.5rem; border-radius:0 0 0.5rem 0.5rem; letter-spacing:0.5px; z-index:2;">Croscarmellose Sodium</div>
+    </div>
+    <div class="flip-card-back" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden; transform:rotateY(180deg);">
+      <div class="flip-product-features" style="margin-top:2.5rem;">
+        <span class="flip-feature-chip">Grades: 711</span>
+        <span class="flip-feature-chip">i100</span>
+        <span class="flip-feature-chip">i200</span>
+      </div>
+      <a href="products-templete.html?product=parcros" class="flip-product-btn" style="margin-top:2.5rem;">Learn More</a>
+    </div>
+  </div>
+</div>
+
+                    <!-- Dibasic Calcium Phosphate -->
+                    <div class="flip-product-card">
+  <div class="flip-card-inner" style="width:100%; height:100%;">
+    <div class="flip-card-front" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden;">
+      <img src="assets/images/products/photography/dibasiccalciumphosphate/image-1.jpg" alt="Dibasic Calcium Phosphate" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:0.5rem; display:block;" />
+      <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(32,87,129,0.85); color:#fff; font-weight:800; font-size:1.15rem; padding:0.7rem 0; text-align:center;border-radius:0.5rem; border-radius:0 0 0.5rem 0.5rem; letter-spacing:0.5px; z-index:2;">Dibasic Calcium Phosphate</div>
+    </div>
+    <div class="flip-card-back" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden; transform:rotateY(180deg);">
+      <div class="flip-product-features" style="margin-top:2.5rem;">
+        <span class="flip-feature-chip">Grades: CALPHOS</span>
+      </div>
+      <a href="products-templete.html?product=calphos" class="flip-product-btn" style="margin-top:2.5rem;">Learn More</a>
+    </div>
+  </div>
+</div>
+
+                    <!-- Magnesium Stearate -->
+                    <div class="flip-product-card">
+  <div class="flip-card-inner" style="width:100%; height:100%;">
+    <div class="flip-card-front" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden;">
+      <img src="assets/images/products/photography/magnesiumstearate/image-1.jpg" alt="Magnesium Stearate" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:0.5rem; display:block;" />
+      <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(32,87,129,0.85); color:#fff; font-weight:800; font-size:1.15rem; padding:0.7rem 0; text-align:center;border-radius:0.5rem; border-radius:0 0 0.5rem 0.5rem; letter-spacing:0.5px; z-index:2;">Magnesium Stearate</div>
+    </div>
+    <div class="flip-card-back" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden; transform:rotateY(180deg);">
+      <div class="flip-product-features" style="margin-top:2.5rem;">
+        <span class="flip-feature-chip">Grades: PARMEG</span>
+      </div>
+      <a href="products-templete.html?product=parmeg" class="flip-product-btn" style="margin-top:2.5rem;">Learn More</a>
+    </div>
+  </div>
+</div>
+
+                    <!-- Microcrystalline Cellulose -->
+                    <div class="flip-product-card">
+  <div class="flip-card-inner" style="width:100%; height:100%;">
+    <div class="flip-card-front" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden;">
+      <img src="assets/images/products/photography/microcrystallinecellulose/image-1.jpg" alt="Microcrystalline Cellulose" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:0.5rem; display:block;" />
+      <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(32,87,129,0.85); color:#fff; font-weight:800; font-size:1.15rem; padding:0.7rem 0; text-align:center;border-radius:0.5rem; border-radius:0 0 0.5rem 0.5rem; letter-spacing:0.5px; z-index:2;">Microcrystalline Cellulose</div>
+    </div>
+    <div class="flip-card-back" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden; transform:rotateY(180deg);">
+      <div class="flip-product-features" style="margin-top:2.5rem;">
+        <span class="flip-feature-chip">Grades: PARLOSE 101</span>
+        <span class="flip-feature-chip">PARLOSE 102</span>
+        <span class="flip-feature-chip">PARLOSE 105</span>
+        <span class="flip-feature-chip">PARLOSE 112</span>
+        <span class="flip-feature-chip">PARLOSE 200</span>
+        <span class="flip-feature-chip">PARLOSE 302</span>
+      </div>
+      <a href="products-templete.html?product=parlose" class="flip-product-btn" style="margin-top:2.5rem;">Learn More</a>
+    </div>
+  </div>
+</div>
+
+                    <!-- Microcrystalline Cellulose + Carboxymethyl Cellulose -->
+                    <div class="flip-product-card">
+  <div class="flip-card-inner" style="width:100%; height:100%;">
+    <div class="flip-card-front" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden;">
+      <img src="assets/images/products/photography/mcc+cmc/image-1.jpg" alt="Microcrystalline Cellulose + Carboxymethyl Cellulose" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:0.5rem; display:block;" />
+      <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(32,87,129,0.85); color:#fff; font-weight:800; font-size:1.15rem; padding:0.7rem 0; text-align:center;border-radius:0.5rem; border-radius:0 0 0.5rem 0.5rem; letter-spacing:0.5px; z-index:2;">Microcrystalline Cellulose + Carboxymethyl Cellulose</div>
+    </div>
+    <div class="flip-card-back" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden; transform:rotateY(180deg);">
+      <div class="flip-product-features" style="margin-top:2.5rem;">
+        <span class="flip-feature-chip">Grades: RC 591</span>
+        <span class="flip-feature-chip">RC 611</span>
+        <span class="flip-feature-chip">RC 811</span>
+      </div>
+      <a href="products-templete.html?product=mcccmc" class="flip-product-btn" style="margin-top:2.5rem;">Learn More</a>
+    </div>
+  </div>
+</div>
+
+                    <!-- Stearic Acid Powder -->
+                    <div class="flip-product-card">
+  <div class="flip-card-inner" style="width:100%; height:100%;">
+    <div class="flip-card-front" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden;">
+      <img src="assets/images/products/photography/stearicacidpowder/image-1.jpg" alt="Stearic Acid Powder" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:0.5rem; display:block;" />
+      <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(32,87,129,0.85); color:#fff; font-weight:800; font-size:1.15rem; padding:0.7rem 0; text-align:center;border-radius:0.5rem; border-radius:0 0 0.5rem 0.5rem; letter-spacing:0.5px; z-index:2;">Stearic Acid Powder</div>
+    </div>
+    <div class="flip-card-back" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden; transform:rotateY(180deg);">
+      <div class="flip-product-features" style="margin-top:2.5rem;">
+        <span class="flip-feature-chip">Grades: Stearic Acid Powder</span>
+      </div>
+      <a href="products-templete.html?product=stearicacidpowder" class="flip-product-btn" style="margin-top:2.5rem;">Learn More</a>
+    </div>
+  </div>
+</div>
+
+                    <!-- Calcium Stearate -->
+                    <div class="flip-product-card">
+  <div class="flip-card-inner" style="width:100%; height:100%;">
+    <div class="flip-card-front" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden;">
+      <img src="assets/images/products/photography/calciumcitrate/image-1.jpg" alt="Calcium Stearate" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:0.5rem; display:block;" />
+      <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(32,87,129,0.85); color:#fff; font-weight:800; font-size:1.15rem; padding:0.7rem 0; text-align:center;border-radius:0.5rem; border-radius:0 0 0.5rem 0.5rem; letter-spacing:0.5px; z-index:2;">Calcium Stearate</div>
+    </div>
+    <div class="flip-card-back" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden; transform:rotateY(180deg);">
+      <div class="flip-product-features" style="margin-top:2.5rem;">
+        <span class="flip-feature-chip">Grades: Calcium Stearate</span>
+      </div>
+      <a href="products-templete.html?product=calciumstearate" class="flip-product-btn" style="margin-top:2.5rem;">Learn More</a>
+    </div>
+  </div>
+</div>
+
+                    <!-- Sodium Starch Glycolate -->
+                    <div class="flip-product-card">
+  <div class="flip-card-inner" style="width:100%; height:100%;">
+    <div class="flip-card-front" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden;">
+      <img src="assets/images/products/photography/sodiumstarchglycolate/image-1.jpg" alt="Sodium Starch Glycolate" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:0.5rem; display:block;" />
+      <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(32,87,129,0.85); color:#fff; font-weight:800; font-size:1.15rem; padding:0.7rem 0; text-align:center;border-radius:0.5rem; border-radius:0 0 0.5rem 0.5rem; letter-spacing:0.5px; z-index:2;">Sodium Starch Glycolate</div>
+    </div>
+    <div class="flip-card-back" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden; transform:rotateY(180deg);">
+      <div class="flip-product-features" style="margin-top:2.5rem;">
+        <span class="flip-feature-chip">Grades: SSG POTATO</span>
+        <span class="flip-feature-chip">SSG MAIZE</span>
+      </div>
+      <a href="products-templete.html?product=pargel" class="flip-product-btn" style="margin-top:2.5rem;">Learn More</a>
+    </div>
+  </div>
+</div>
+
+                    <!-- Calcium Citrate -->
+                    <div class="flip-product-card">
+  <div class="flip-card-inner" style="width:100%; height:100%;">
+    <div class="flip-card-front" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden;">
+      <img src="assets/images/products/photography/calciumcitrate/image-1.jpg" alt="Calcium Citrate" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:0.5rem; display:block;" />
+      <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(32,87,129,0.85); color:#fff; font-weight:800; font-size:1.15rem; padding:0.7rem 0; text-align:center;border-radius:0.5rem; border-radius:0 0 0.5rem 0.5rem; letter-spacing:0.5px; z-index:2;">Calcium Citrate</div>
+    </div>
+    <div class="flip-card-back" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden; transform:rotateY(180deg);">
+      <div class="flip-product-features" style="margin-top:2.5rem;">
+        <span class="flip-feature-chip">Grades: Calcium Citrate</span>
+      </div>
+      <a href="products-templete.html?product=calciumcitrate" class="flip-product-btn" style="margin-top:2.5rem;">Learn More</a>
+    </div>
+  </div>
+</div>
+
+                    <!-- Magnesium Citrate -->
+                    <div class="flip-product-card">
+  <div class="flip-card-inner" style="width:100%; height:100%;">
+    <div class="flip-card-front" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden;">
+      <img src="assets/images/products/photography/crospovidone/image-1.jpg" alt="Magnesium Citrate" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:0.5rem; display:block;" />
+      <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(32,87,129,0.85); color:#fff; font-weight:800; font-size:1.15rem; padding:0.7rem 0; text-align:center;border-radius:0.5rem; border-radius:0 0 0.5rem 0.5rem; letter-spacing:0.5px; z-index:2;">Magnesium Citrate</div>
+    </div>
+    <div class="flip-card-back" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden; transform:rotateY(180deg);">
+      <div class="flip-product-features" style="margin-top:2.5rem;">
+        <span class="flip-feature-chip">Grades: Magnesium Citrate</span>
+      </div>
+      <a href="products-templete.html?product=magnesiumcitrate" class="flip-product-btn" style="margin-top:2.5rem;">Learn More</a>
+    </div>
+  </div>
+</div>
+
+                    <!-- Calcium Carbonate -->
+                    <div class="flip-product-card">
+  <div class="flip-card-inner" style="width:100%; height:100%;">
+    <div class="flip-card-front" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden;">
+      <img src="assets/images/products/photography/sodiumstarchglycolate/image-1.jpg" alt="Calcium Carbonate" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:0.5rem; display:block;" />
+      <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(32,87,129,0.85); color:#fff; font-weight:800; font-size:1.15rem; padding:0.7rem 0; text-align:center;border-radius:0.5rem; border-radius:0 0 0.5rem 0.5rem; letter-spacing:0.5px; z-index:2;">Calcium Carbonate</div>
+    </div>
+    <div class="flip-card-back" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden; transform:rotateY(180deg);">
+      <div class="flip-product-features" style="margin-top:2.5rem;">
+        <span class="flip-feature-chip">Grades: CARBOPAR</span>
+      </div>
+      <a href="products-templete.html?product=carbopar" class="flip-product-btn" style="margin-top:2.5rem;">Learn More</a>
+    </div>
+  </div>
+</div>
+
+
+                    <!-- Talc -->
+                    <div class="flip-product-card">
+  <div class="flip-card-inner" style="width:100%; height:100%;">
+    <div class="flip-card-front" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden;">
+      <img src="assets/images/products/photography/mcc+cmc/image-1.jpg" alt="Talc" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:0.5rem; display:block;" />
+      <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(32,87,129,0.85); color:#fff; font-weight:800; font-size:1.15rem; padding:0.7rem 0; text-align:center;border-radius:0.5rem; border-radius:0 0 0.5rem 0.5rem; letter-spacing:0.5px; z-index:2;">Talc</div>
+    </div>
+    <div class="flip-card-back" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden; transform:rotateY(180deg);">
+      <div class="flip-product-features" style="margin-top:2.5rem;">
+        <span class="flip-feature-chip">Grades: Talc</span>
+      </div>
+      <a href="products-templete.html?product=talc" class="flip-product-btn" style="margin-top:2.5rem;">Learn More</a>
+    </div>
+  </div>
+</div>
+
+                    <!-- Sodium Starch Glycolate (2nd occurrence) -->
+                    <!-- <div class="flip-product-card">
+  <div class="flip-card-inner" style="width:100%; height:100%;">
+    <div class="flip-card-front" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden;">
+      <img src="assets/images/products/image-1.jpg" alt="Sodium Starch Glycolate" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:0.5rem; display:block;" />
+      <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(32,87,129,0.85); color:#fff; font-weight:800; font-size:1.15rem; padding:0.7rem 0; text-align:center;border-radius:0.5rem; border-radius:0 0 0.5rem 0.5rem; letter-spacing:0.5px; z-index:2;">Sodium Starch Glycolate</div>
+    </div>
+    <div class="flip-card-back" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden; transform:rotateY(180deg);">
+      <div class="flip-product-features" style="margin-top:2.5rem;">
+        <span class="flip-feature-chip">Grades: SSG POTATO</span>
+        <span class="flip-feature-chip">SSG MAIZE</span>
+      </div>
+      <a href="#" class="flip-product-btn" style="margin-top:2.5rem;">Learn More</a>
+    </div>
+  </div>
+</div> -->
+
+                    <!-- Calcium Carboxymethyl Cellulose -->
+                    <div class="flip-product-card">
+  <div class="flip-card-inner" style="width:100%; height:100%;">
+    <div class="flip-card-front" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden;">
+      <img src="assets/images/products/photography/calciumcarboxymethylcellulose/image-1.jpg" alt="Calcium Carboxymethyl Cellulose" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:0.5rem; display:block;" />
+      <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(32,87,129,0.85); color:#fff; font-weight:800; font-size:1.15rem; padding:0.7rem 0; text-align:center;border-radius:0.5rem; border-radius:0 0 0.5rem 0.5rem; letter-spacing:0.5px; z-index:2;">Calcium Carboxymethyl Cellulose</div>
+    </div>
+    <div class="flip-card-back" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden; transform:rotateY(180deg);">
+      <div class="flip-product-features" style="margin-top:2.5rem;">
+        <span class="flip-feature-chip">Grades: CAL-O-PAR 100</span>
+        <span class="flip-feature-chip">CAL-O-PAR 200</span>
+      </div>
+      <a href="products-templete.html?product=calopar" class="flip-product-btn" style="margin-top:2.5rem;">Learn More</a>
+    </div>
+  </div>
+</div>
+
+                    
+
+                    <!--Methylcobalamin-->
+                    <div class="flip-product-card">
+  <div class="flip-card-inner" style="width:100%; height:100%;">
+    <div class="flip-card-front" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden;">
+      <img src="assets/images/products/photography/microcrystallinecellulose/image-1.jpg" alt="Maethylcobalamin" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:0.5rem; display:block;" />
+      <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(32,87,129,0.85); color:#fff; font-weight:800; font-size:1.15rem; padding:0.7rem 0; text-align:center;border-radius:0.5rem; border-radius:0 0 0.5rem 0.5rem; letter-spacing:0.5px; z-index:2;">Methylcobalamin</div>
+    </div>
+    <div class="flip-card-back" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden; transform:rotateY(180deg);">
+      <div class="flip-product-features" style="margin-top:2.5rem;">
+        <span class="flip-feature-chip">Grades: Methylcobalamin</span>
+      </div>
+      <a href="products-templete.html?product=methylcobalamin" class="flip-product-btn" style="margin-top:2.5rem;">Learn More</a>
+    </div>
+  </div>
+</div>
+
+                    <!-- Magnesium Glycinate -->
+                    <div class="flip-product-card">
+  <div class="flip-card-inner" style="width:100%; height:100%;">
+    <div class="flip-card-front" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden;">
+      <img src="assets/images/products/photography/magnesiumglycinate/image-1.jpg" alt="Magnesium Glycinate" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:0.5rem; display:block;" />
+      <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(32,87,129,0.85); color:#fff; font-weight:800; font-size:1.15rem; padding:0.7rem 0; text-align:center;border-radius:0.5rem; border-radius:0 0 0.5rem 0.5rem; letter-spacing:0.5px; z-index:2;">Magnesium Glycinate</div>
+    </div>
+    <div class="flip-card-back" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden; transform:rotateY(180deg);">
+      <div class="flip-product-features" style="margin-top:2.5rem;">
+        <span class="flip-feature-chip">Grades: same as per pharmachem</span>
+      </div>
+      <a href="products-templete.html?product=magnesiumglycinate" class="flip-product-btn" style="margin-top:2.5rem;">Learn More</a>
+    </div>
+  </div>
+</div>
+
+                    
+
+                    <!-- Potassium Citrate -->
+                    <div class="flip-product-card">
+  <div class="flip-card-inner" style="width:100%; height:100%;">
+    <div class="flip-card-front" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden;">
+      <img src="assets/images/products/photography/microcrystallinecellulose/image-1.jpg" alt="Potassium Citrate" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:0.5rem; display:block;" />
+      <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(32,87,129,0.85); color:#fff; font-weight:800; font-size:1.15rem; padding:0.7rem 0; text-align:center;border-radius:0.5rem; border-radius:0 0 0.5rem 0.5rem; letter-spacing:0.5px; z-index:2;">Potassium Citrate</div>
+    </div>
+    <div class="flip-card-back" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden; transform:rotateY(180deg);">
+      <div class="flip-product-features" style="margin-top:2.5rem;">
+        <span class="flip-feature-chip">Grades: Potassium Citrate</span>
+      </div>
+      <a href="products-templete.html?product=potassiumcitrate" class="flip-product-btn" style="margin-top:2.5rem;">Learn More</a>
+    </div>
+  </div>
+</div>
+
+                    <!-- Calcium Citrate Malate -->
+                    <div class="flip-product-card">
+  <div class="flip-card-inner" style="width:100%; height:100%;">
+    <div class="flip-card-front" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden;">
+      <img src="assets/images/products/photography/mcc+cmc/image-1.jpg" alt="Calcium Citrate Malate" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:0.5rem; display:block;" />
+      <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(32,87,129,0.85); color:#fff; font-weight:800; font-size:1.15rem; padding:0.7rem 0; text-align:center;border-radius:0.5rem; border-radius:0 0 0.5rem 0.5rem; letter-spacing:0.5px; z-index:2;">Calcium Citrate Malate</div>
+    </div>
+    <div class="flip-card-back" style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0.5rem; overflow:hidden; backface-visibility:hidden; transform:rotateY(180deg);">
+      <div class="flip-product-features" style="margin-top:2.5rem;">
+        <span class="flip-feature-chip">Grades: Calcium Citrate Malate</span>
+      </div>
+      <a href="products-templete.html?product=calciumcitratemaleate" class="flip-product-btn" style="margin-top:2.5rem;">Learn More</a>
+    </div>
+  </div>
+</div>
+
+                                         
+                </div>
+    </main>
+
+    <!-- Dynamic Footer -->
+    <div id="footer-dynamic"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('footer-dynamic').innerHTML = html;
+          });
+      });
+    </script>
+    
+    <script>
+        // Additional page-specific functionality
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const animatedElements = document.querySelectorAll('.fade-in-up, .stagger-fade-in-up > *');
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.parentElement.classList.contains('stagger-fade-in-up') && !entry.target.style.animationDelay) {
+                         const children = Array.from(entry.target.parentElement.children);
+                         const index = children.indexOf(entry.target);
+                         entry.target.style.animationDelay = `${index * 0.15}s`; 
+                    }
+                    entry.target.classList.add('is-visible'); 
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    obs.unobserve(entry.target); 
+                }
+            });
+        }, { threshold: 0.1 });
+
+        animatedElements.forEach(el => {
+            el.style.opacity = '0';
+            if (el.classList.contains('fade-in-up') || el.parentElement.classList.contains('stagger-fade-in-up')) {
+                 el.style.transform = 'translateY(30px)';
+            }
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

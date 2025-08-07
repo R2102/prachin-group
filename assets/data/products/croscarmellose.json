@@ -1,0 +1,32 @@
+
+{
+  "title": "Croscarmellose Sodium",
+  "CatImg": "products/Croscarmellose Sodium.jpg",
+  "productImg": "products/Croscarmellose Sodium.jpg",
+  "brandName": "PARSOLV",
+  "CASNumber": "74811-65-7",
+  "synonyms": [
+    "Crosslinked Carboxymethylcellulose Sodium",
+    "Modified Cellulose Gum"
+  ],
+  "applications": [
+    "Pharmaceuticals",
+    "Nutraceuticals",
+    "Food"
+  ],
+  "productOverview": "Croscarmellose Sodium is an internally cross-linked sodium carboxymethylcellulose (NaCMC) used as a superdisintegrant in pharmaceutical formulations. It facilitates the rapid disintegration of tablets and capsules, ensuring quick dissolution of the active pharmaceutical ingredient (API).",
+  "variants": [
+    {
+      "name": "Type A",
+      "specifications": [
+        { "property": "Description", "value": "White or grayish-white powder" },
+        { "property": "Solubility", "value": "Insoluble in water, though it swells rapidly" },
+        { "property": "Identification", "value": "Complies with USP/NF, EP, JP" },
+        { "property": "pH", "value": "5.0 - 7.0" },
+        { "property": "Loss on Drying", "value": "≤ 10.0%" },
+        { "property": "Degree of Substitution", "value": "0.60 - 0.85" },
+        { "property": "Settling Volume", "value": "10.0 - 30.0 mL" }
+      ]
+    }
+  ]
+}
