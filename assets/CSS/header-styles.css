@@ -147,6 +147,40 @@ html {
     opacity: 1;
 }
 
+/* Products submenu animation and display */
+#products-submenu {
+    transition: all 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+#products-submenu:not(.hidden) {
+    max-height: 1000px;
+    overflow: visible;
+}
+
+/* Ensure products toggle button is clickable */
+#products-toggle {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* Improve touch targets for mobile */
+@media (max-width: 768px) {
+    #products-toggle {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+    }
+    
+    #products-submenu a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
+
 /* Quick links animation */
 .quick-link {
     transition: all 0.3s ease;

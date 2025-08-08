@@ -3618,4 +3618,8 @@ aside.sidebar-widget {
     background: #f7fafc;
     border: 1px solid #e6f0fa;
   }
-
+@media (max-width: 768px) {
+.grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.gap-6.md\:gap-10.items-stretch.tabcard.px-4.sm\:px-0 {
+    padding-left: 0px;
+}
+}

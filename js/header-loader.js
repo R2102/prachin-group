@@ -17,24 +17,73 @@ function initializeMobileMenu() {
     const productsSubmenu = document.getElementById('products-submenu');
     const productsChevron = document.getElementById('products-chevron');
 
+    console.log('Initializing mobile menu...', { mobileMenuButton, mobileMenu });
+
     if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', () => {
+        // Remove any existing event listeners to prevent duplicates
+        mobileMenuButton.replaceWith(mobileMenuButton.cloneNode(true));
+        const newMobileMenuButton = document.getElementById('mobile-menu-button');
+        
+        newMobileMenuButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Mobile menu button clicked');
             mobileMenu.classList.toggle('hidden');
         });
+
+        // Also add touch event for mobile devices
+        newMobileMenuButton.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Mobile menu button touched');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Mark as initialized
+        newMobileMenuButton.setAttribute('data-initialized', 'true');
+    } else {
+        console.error('Mobile menu elements not found:', { mobileMenuButton, mobileMenu });
     }
 
     if (productsToggle && productsSubmenu && productsChevron) {
-        productsToggle.addEventListener('click', () => {
+        console.log('Initializing products submenu...', { productsToggle, productsSubmenu, productsChevron });
+        
+        // Remove any existing event listeners to prevent duplicates
+        productsToggle.replaceWith(productsToggle.cloneNode(true));
+        const newProductsToggle = document.getElementById('products-toggle');
+        const newProductsChevron = document.getElementById('products-chevron');
+        
+        // Add click event
+        newProductsToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Products toggle clicked');
             productsSubmenu.classList.toggle('hidden');
-            productsChevron.style.transform = productsSubmenu.classList.contains('hidden') 
+            newProductsChevron.style.transform = productsSubmenu.classList.contains('hidden') 
                 ? 'rotate(0deg)' 
                 : 'rotate(180deg)';
         });
+
+        // Add touch event for mobile devices
+        newProductsToggle.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Products toggle touched');
+            productsSubmenu.classList.toggle('hidden');
+            newProductsChevron.style.transform = productsSubmenu.classList.contains('hidden') 
+                ? 'rotate(0deg)' 
+                : 'rotate(180deg)';
+        });
+        
+        // Mark as initialized
+        newProductsToggle.setAttribute('data-initialized', 'true');
+    } else {
+        console.error('Products submenu elements not found:', { productsToggle, productsSubmenu, productsChevron });
     }
 
     // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {
-        if (mobileMenu && !mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+        if (mobileMenu && !mobileMenu.contains(e.target) && !document.getElementById('mobile-menu-button').contains(e.target)) {
             mobileMenu.classList.add('hidden');
         }
     });
@@ -135,21 +184,34 @@ function initializeScrollEffects() {
         function loadHeader(headerData) {
             headerContainer.innerHTML = headerData;
             
-            // Initialize all functions immediately after DOM insertion
-            requestAnimationFrame(() => {
+            // Initialize all functions with a small delay to ensure DOM is ready
+            setTimeout(() => {
+                console.log('Initializing header functionality...');
                 // Initialize mobile menu
-                if (typeof initializeMobileMenu === 'function') {
+                initializeMobileMenu();
+                // Initialize mega menu after header is loaded
+                initializeMegaMenu();
+                // Initialize scroll effects after header content is loaded
+                initializeScrollEffects();
+            }, 100);
+            
+            // Fallback initialization with longer delay
+            setTimeout(() => {
+                console.log('Fallback initialization...');
+                // Re-initialize if elements are still not working
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const productsToggle = document.getElementById('products-toggle');
+                
+                if (mobileMenuButton && !mobileMenuButton.hasAttribute('data-initialized')) {
+                    console.log('Re-initializing mobile menu...');
                     initializeMobileMenu();
                 }
-                // Initialize mega menu after header is loaded
-                if (typeof initializeMegaMenu === 'function') {
-                    initializeMegaMenu();
+                
+                if (productsToggle && !productsToggle.hasAttribute('data-initialized')) {
+                    console.log('Re-initializing products submenu...');
+                    initializeMobileMenu(); // This includes products submenu
                 }
-                // Initialize scroll effects after header content is loaded
-                if (typeof initializeScrollEffects === 'function') {
-                    initializeScrollEffects();
-                }
-            });
+            }, 1000);
         }
         
         // Load header immediately
