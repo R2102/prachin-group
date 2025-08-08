@@ -1093,6 +1093,10 @@
           .then(response => response.text())
           .then(html => {
             document.getElementById('footer-dynamic').innerHTML = html;
+            // Load footer functionality after HTML is loaded
+            var script = document.createElement('script');
+            script.src = 'js/footer-dynamic.js';
+            document.body.appendChild(script);
           });
       });
     </script>

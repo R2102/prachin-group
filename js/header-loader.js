@@ -42,7 +42,7 @@ function initializeMobileMenu() {
 
 // Initialize mega menu functionality
 function initializeMegaMenu() {
-    // Full width products dropdown (hover-based)
+    // Products dropdown (hover-based with always visible colored tabs)
     const productsTrigger = document.getElementById('products-trigger');
     const productsOverlay = document.getElementById('products-overlay');
 
@@ -54,19 +54,20 @@ function initializeMegaMenu() {
         const categoryTabs = document.querySelectorAll('.category-tab');
         const categoryContents = document.querySelectorAll('.category-content');
         
+        // DON'T override the default styles - preserve template styling
+        // The template already has the correct inline styles applied
+        
         categoryTabs.forEach(tab => {
             tab.addEventListener('click', function() {
                 const targetCategory = this.getAttribute('data-category');
                 
-                // Update tab styles
+                // Update tab styles using CSS classes
                 categoryTabs.forEach(t => {
-                    t.classList.remove('bg-blue-50', 'text-blue-800', 'border-blue-200', 'shadow-sm');
-                    t.classList.remove('bg-red-50', 'text-red-700', 'border-red-200', 'shadow-sm');
-                    t.classList.add('bg-blue-50', 'text-blue-800', 'border-blue-200', 'shadow-sm');
+                    t.classList.remove('active');
                 });
-                // Add active styles (red) to the clicked tab
-                this.classList.remove('bg-blue-50', 'text-blue-800', 'border-blue-200');
-                this.classList.add('bg-red-50', 'text-red-700', 'border-red-200');
+                
+                // Add active class to the clicked tab
+                this.classList.add('active');
                 
                 // Show/hide content
                 categoryContents.forEach(content => {
